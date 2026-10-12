@@ -2,7 +2,20 @@
 target/
 *.class
 
-# IDE
+# Node / Frontend
+node_modules/
+dist/
+build/
+
+# Variables de entorno y credenciales
+.env
+.env.local
+
+# Logs
+*.log
+npm-debug.log*
+
+# IDEs y Editores
 .idea/
 *.iml
 .vscode/
@@ -10,6 +23,4 @@ target/
 # Sistema operativo
 .DS_Store
 Thumbs.db
-
-# Variables de entorno / credenciales
-.env
+desktop.ini
