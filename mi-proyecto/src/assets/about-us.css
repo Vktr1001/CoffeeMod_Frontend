@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Space+Grotesk:wght@500;700&display=swap");
+
+.subtitulo-seccion, .card-rol, .subtitulo-trayectoria {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 11px;
+  color: #a42c12; /* Color óxido usado en el diseño */
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.titulo-seccion {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 700;
+  color: #09090b;
+}
+
+.card-equipo {
+  background-color: #fafafa;
+  border: 1px solid #09090b;
+  border-radius: 0; /* Estilo cuadrado acorde al wireframe */
+}
+
+.card-img-top {
+  border-bottom: 1px solid #09090b;
+  border-radius: 0;
+  object-fit: cover;
+  height: 220px;
+}
+
+.card-nombre {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-top: 4px;
+}
+
+.card-desc {
+  font-size: 0.88rem;
+  color: #3f3f46;
+}
+
+.card-trayectoria {
+  border-top: 1px dashed #d4d4d8;
+  padding-top: 8px;
+}
+
+.texto-trayectoria {
+  font-size: 0.8rem;
+  color: #71717a;
+  margin-bottom: 0;
+}
