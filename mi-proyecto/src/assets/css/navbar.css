@@ -17,7 +17,6 @@
 }
 
 .navbar-cm {
-  padding: 12px 16px;
   background: var(--ceniza);
   border-bottom: 1px solid var(--negro);
   font-family: "Space Grotesk", sans-serif;
@@ -48,9 +47,10 @@
   color: var(--oxido);
 }
 
-.nav-acciones {
-  gap: 16px;
-  margin-left: auto;
+/* boton hamburguesa cuadrado */
+.navbar-cm .navbar-toggler {
+  border: 1px solid var(--negro);
+  border-radius: 0;
 }
 
 .nav-contador {
@@ -58,13 +58,4 @@
   background: var(--oxido);
   color: var(--ceniza);
   font-size: 11px;
-}
-
-/* escritorio: links izq, logo centro, acciones der */
-@media (min-width: 992px) {
-  .navbar-cm { padding: 18px 40px; }
-  .navbar-cm .nav-links { order: 1; flex: 1; }
-  .nav-links .navbar-nav { gap: 32px; }
-  .navbar-cm .nav-logo { order: 2; margin: 0; }
-  .navbar-cm .nav-acciones { order: 3; flex: 1; justify-content: flex-end; gap: 28px; margin-left: 0; }
 }

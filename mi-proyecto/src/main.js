@@ -1,19 +1,11 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap-icons/font/bootstrap-icons.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import { crearNavbar } from './components/navbar.js';
-import { crearFooter } from './components/footer.js'; 
+import { crearFooter } from './components/footer.js';
 
-import { crearTarjetasEquipo } from './components/team-cards.js';
+// navbar arriba
+document.querySelector('#header').innerHTML = crearNavbar('nosotros');
 
-
-// pone el navbar arriba de la pagina
-document.querySelector('#header').innerHTML = crearNavbar('');
-
-// Pone el footer abajo de la página
+// footer abajo
 document.querySelector('#footer').innerHTML = crearFooter();
-
-//Inserta las tarjetas dentro de la etiqueta <main>
-const mainContent = document.querySelector('.main-content');
-if (mainContent) {
-  mainContent.innerHTML = crearTarjetasEquipo();
-}
