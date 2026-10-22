@@ -49,3 +49,35 @@
   color: #71717a;
   margin-bottom: 0;
 }
+
+
+
+/*v2*/
+
+
+/* Estética general del módulo */
+#about-us {
+    background-color: #121212 !important;
+}
+
+/* Efecto Hover en las miniaturas (Grayscale al 45% por defecto, color y borde rojo óxido al activar) */
+.member-thumb img {
+    filter: grayscale(80%) brightness(55%);
+    transition: all 0.3s ease;
+}
+
+.member-thumb:hover img, 
+.member-thumb.active-thumb img {
+    filter: grayscale(0%) brightness(100%);
+    border-color: #A42C12 !important;
+}
+
+/* Animaciones de transición para la foto y el texto principal */
+#active-member-img, #member-info {
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.fade-out {
+    opacity: 0;
+    transform: translateY(15px);
+}
