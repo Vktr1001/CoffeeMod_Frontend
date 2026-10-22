@@ -16,11 +16,119 @@
 
         
       </main>
+
+      <!--v2-->
+
+
+<section id="about-us" class="container-fluid bg-dark text-white py-5">
+    <div class="row align-items-center min-vh-75 px-4">
+        <!-- Columna Izquierda: Imagen del integrante activo y fondo de marca -->
+        <div class="col-lg-5 position-relative text-center">
+            <div class="brand-bg-text position-absolute display-1 text-muted opacity-10 fw-bold">1001 LABS</div>
+            <div class="member-photo-container position-relative z-1">
+                <!-- Aquí se inyecta dinámicamente con JS la foto del miembro activo -->
+                <img id="active-member-img" src="src/img/devs/LuisAngel.png" alt="Luis Ángel Calvillo Velázquez" class="img-fluid rounded shadow-lg">
+            </div>
+        </div>
+
+        <!-- Columna Derecha: Información del rol, nombre y biografía -->
+        <div class="col-lg-7 ps-lg-5">
+            <div id="member-info">
+                <span class="text-uppercase tracking-wider text-danger fw-semibold small" id="member-counter">08 / 09</span>
+                <p class="text-uppercase text-muted small mt-1" id="member-role">INGENIERÍA EN REDES Y CIBERSEGURIDAD // DESARROLLO FULL STACK</p>
+                
+                <h1 class="display-5 fw-bold text-white mb-3" id="member-name">Luis Ángel Calvillo Velázquez</h1>
+                
+                <p class="lead text-light mb-4" id="member-summary">
+                    Construyo la infraestructura y conecto los servicios digitales de forma segura.
+                </p>
+
+                <h6 class="text-uppercase text-muted small tracking-wider mb-2">DE DÓNDE VENGO / A DÓNDE VOY</h6>
+                <p class="text-secondary" id="member-bio">
+                    Me formé como Ingeniero en Redes Inteligentes y Ciberseguridad, y como Técnico Superior Universitario en Redes y Telecomunicaciones. He trabajado implementando infraestructura de red y gestionando tecnologías de la información. Hoy doy el salto al desarrollo Full Stack, combinando la seguridad de las redes con aplicaciones web robustas en Java, Spring Boot y JavaScript para crear experiencias digitales confiables en CoffeeMod.
+                </p>
+
+                <!-- Botones de navegación del carrusel -->
+                <div class="d-flex gap-3 mt-4">
+                    <button class="btn btn-outline-light rounded-circle p-3 d-flex align-items-center justify-content-center" id="prev-member" style="width: 45px; height: 45px;">
+                        <i class="bi bi-arrow-left"></i>
+                    </button>
+                    <button class="btn btn-outline-light rounded-circle p-3 d-flex align-items-center justify-content-center" id="next-member" style="width: 45px; height: 45px;">
+                        <i class="bi bi-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Fila Inferior: Miniaturas de todo el equipo de 1001 Labs -->
+    <div class="row mt-5 pt-4 border-top border-secondary">
+        <div class="col-12">
+            <div class="d-flex overflow-auto gap-3 pb-2 justify-content-lg-center" id="thumbnails-container">
+                <!-- Miniatura: Jocelin -->
+                <div class="member-thumb text-center cursor-pointer" data-index="0" style="min-width: 90px;">
+                    <img src="src/img/devs/Alma.png" alt="Jocelin" class="rounded img-fluid grayscale hover-color mb-1" style="width: 75px; height: 75px; object-fit: cover;">
+                    <small class="d-block text-uppercase text-muted">JOCELIN</small>
+                </div>
+                <!-- Miniatura: Isaac -->
+                <div class="member-thumb text-center cursor-pointer" data-index="1" style="min-width: 90px;">
+                    <img src="src/img/devs/Isaac.png" alt="Isaac" class="rounded img-fluid grayscale hover-color mb-1" style="width: 75px; height: 75px; object-fit: cover;">
+                    <small class="d-block text-uppercase text-muted">ISAAC</small>
+                </div>
+                <!-- Miniatura: Víctor -->
+                <div class="member-thumb text-center cursor-pointer" data-index="2" style="min-width: 90px;">
+                    <img src="src/img/devs/Victor.png" alt="Víctor" class="rounded img-fluid grayscale hover-color mb-1" style="width: 75px; height: 75px; object-fit: cover;">
+                    <small class="d-block text-uppercase text-muted">VIKTOR</small>
+                </div>
+                <!-- Miniatura: Daniela -->
+                <div class="member-thumb text-center cursor-pointer" data-index="3" style="min-width: 90px;">
+                    <img src="src/img/devs/Daniela.png" alt="Daniela" class="rounded img-fluid grayscale hover-color mb-1" style="width: 75px; height: 75px; object-fit: cover;">
+                    <small class="d-block text-uppercase text-muted">DANIELA</small>
+                </div>
+                <!-- Miniatura: Ana -->
+                <div class="member-thumb text-center cursor-pointer" data-index="4" style="min-width: 90px;">
+                    <img src="src/img/devs/Ana.png" alt="Ana" class="rounded img-fluid grayscale hover-color mb-1" style="width: 75px; height: 75px; object-fit: cover;">
+                    <small class="d-block text-uppercase text-muted">ANA</small>
+                </div>
+                <!-- Miniatura: Cesar -->
+                <div class="member-thumb text-center cursor-pointer" data-index="5" style="min-width: 90px;">
+                    <img src="src/img/devs/Cesar.png" alt="Cesar" class="rounded img-fluid grayscale hover-color mb-1" style="width: 75px; height: 75px; object-fit: cover;">
+                    <small class="d-block text-uppercase text-muted">CESAR</small>
+                </div>
+                <!-- Miniatura: Israel -->
+                <div class="member-thumb text-center cursor-pointer" data-index="6" style="min-width: 90px;">
+                    <img src="src/img/devs/Israel.png" alt="Israel" class="rounded img-fluid grayscale hover-color mb-1" style="width: 75px; height: 75px; object-fit: cover;">
+                    <small class="d-block text-uppercase text-muted">ISRAEL</small>
+                </div>
+                <!-- Miniatura: Luis (Tú) -->
+                <div class="member-thumb text-center cursor-pointer active-thumb" data-index="7" style="min-width: 90px;">
+                    <img src="src/img/devs/LuisAngel.png" alt="Luis" class="rounded img-fluid border border-2 border-danger mb-1" style="width: 75px; height: 75px; object-fit: cover;">
+                    <small class="d-block text-uppercase text-white fw-bold">LUIS</small>
+                </div>
+                <!-- Miniatura: Sergio -->
+                <div class="member-thumb text-center cursor-pointer" data-index="8" style="min-width: 90px;">
+                    <img src="src/img/devs/Sergio.png" alt="Sergio" class="rounded img-fluid grayscale hover-color mb-1" style="width: 75px; height: 75px; object-fit: cover;">
+                    <small class="d-block text-uppercase text-muted">SERGIO</small>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
       
+      <!--V2-->
+
+
+
+
       <!-- Footer  -->
       <div id="footer"></div>
     </div>
     
+
+
+
+
+
     <!-- JavaScript -->
     <script type="module" src="/src/main.js"></script>
   </body>
