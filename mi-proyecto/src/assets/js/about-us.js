@@ -105,10 +105,10 @@ function dosDigitos(num) {
 function crearRedes(p) {
   let redes = '';
   if (p.github) {
-    redes += `<a href="${p.github}" target="_blank" rel="noopener" class="link-light fs-3" aria-label="GitHub de ${p.nombre}"><i class="bi bi-github"></i></a>`;
+    redes += `<a href="${p.github}" target="_blank" rel="noopener" class="about-red fs-3" aria-label="GitHub de ${p.nombre}"><i class="bi bi-github"></i></a>`;
   }
   if (p.linkedin) {
-    redes += `<a href="${p.linkedin}" target="_blank" rel="noopener" class="link-light fs-3" aria-label="LinkedIn de ${p.nombre}"><i class="bi bi-linkedin"></i></a>`;
+    redes += `<a href="${p.linkedin}" target="_blank" rel="noopener" class="about-red fs-3" aria-label="LinkedIn de ${p.nombre}"><i class="bi bi-linkedin"></i></a>`;
   }
   return redes;
 }
