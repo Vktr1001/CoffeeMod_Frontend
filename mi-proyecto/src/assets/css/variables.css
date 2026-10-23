@@ -40,3 +40,17 @@ body {
   color: var(--texto-principal);
   transition: background-color 0.3s ease, color 0.3s ease;
 }
+
+.bi-github, 
+.bi-linkedin, 
+.footer-social-icon, 
+.nav-social-icon {
+  color: var(--texto-principal);
+  transition: color 0.3s ease; /* Para que el cambio de color sea suave */
+}
+
+Efecto hover para que se pongan color óxido al pasar el mouse */
+.bi-github:hover, 
+.bi-linkedin:hover {
+  color: var(--oxido) !important;
+}
