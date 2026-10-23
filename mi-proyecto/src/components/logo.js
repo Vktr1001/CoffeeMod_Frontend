@@ -1,4 +1,3 @@
-import '../assets/css/logo.css';
 
 // lo usan navbar y footer, el grano toma el color del texto (currentColor)
 export function crearLogo() {
@@ -11,6 +10,6 @@ export function crearLogo() {
         <rect x="17.1113" y="26.4443" width="4.44444" height="4.44444" fill="currentColor" stroke="none"/>
         <rect x="22.4443" y="42.4443" width="4.44444" height="4.44444" fill="currentColor" stroke="none"/>
       </svg>
-      <span class="logo-texto fw-bold lh-1">COFFEE<br>MOD<span class="logo-cuadro d-inline-block ms-2"></span></span>
+      <span class="logo-texto fw-bold lh-1">COFFEE<br>MOD<span class="logo-cuadro d-inline-block"></span></span>
     </span>`;
 }

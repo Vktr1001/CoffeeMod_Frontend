@@ -1,4 +1,3 @@
-import '../assets/css/navbar.css';
 import { toggleTheme } from '../assets/js/theme.js';
 import { crearLogo } from './logo.js';
 
