@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=JetBrains+Mono&family=Space+Grotesk:wght@500;700&display=swap");
+
+/* Contenedor principal de la página (dinámico según data-theme) */
+.about-pagina {
+  background: var(--bg-principal);
+  color: var(--texto-principal);
+  font-family: "Inter", sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.about-titulos {
+  font-family: "Space Grotesk", sans-serif;
+  letter-spacing: -0.03em;
+  color: var(--texto-principal);
+}
+
+/* texto chico tipo dato */
+.about-mono {
+  color: var(--texto-secundario);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 13px;
+  letter-spacing: 0.06em;
+}
+
+.about-rol {
+  color: var(--oxido);
+}
+
+/* texto 1001 LABS atras de la foto en el carrusel */
+.about-fondo {
+  color: var(--borde-color);
+  font-family: "Space Grotesk", sans-serif;
+}
+
+/* todas las slides en la misma celda para que no cambie la altura */
+#slides-equipo {
+  display: grid;
+}
+
+#slides-equipo .carousel-item {
+  display: block;
+  grid-area: 1 / 1;
+  margin-right: 0;
+  background: var(--bg-principal);
+}
+
+/* el texto que se va se esconde y el nuevo aparece al terminar el cambio */
+.about-info {
+  transition: opacity 0.3s;
+}
+
+.carousel-item:not(.active) .about-info,
+.carousel-item.active.carousel-item-start .about-info,
+.carousel-item.active.carousel-item-end .about-info {
+  opacity: 0;
+}
+
+/* miniaturas: le quito el estilo de rayitas a los indicadores de bootstrap */
+#miniaturas-equipo {
+  position: static;
+  justify-content: flex-start;
+  margin: 0;
+}
+
+#miniaturas-equipo button {
+  flex: 0 0 auto;
+  width: 80px;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  text-indent: 0;
+  background: none;
+  border: 0;
+  opacity: 1;
+}
+
+#miniaturas-equipo img {
+  aspect-ratio: 1;
+  border: 3px solid transparent;
+  filter: grayscale(100%);
+  opacity: 0.45;
+  transition: 0.3s;
+}
+
+#miniaturas-equipo span {
+  color: var(--texto-secundario);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 11px;
+}
+
+#miniaturas-equipo button:hover img,
+#miniaturas-equipo button.active img {
+  filter: none;
+  opacity: 1;
+}
+
+#miniaturas-equipo button.active img {
+  border-color: var(--oxido);
+}
+
+#miniaturas-equipo button.active span {
+  color: var(--texto-principal);
+}
+
+/* redes y flechas cambian con el tema */
+.about-red,
+.about-btn {
+  color: var(--texto-principal);
+  border-color: var(--texto-principal);
+}
+
+.about-red:hover,
+.about-btn:hover {
+  color: var(--oxido);
+  border-color: var(--oxido);
+}

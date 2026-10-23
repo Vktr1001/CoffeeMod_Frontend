@@ -1,0 +1,56 @@
+
+/* Tema por defecto (DARK / OSCURO) */
+:root {
+  --bg-principal: #09090b;
+  --texto-principal: #fafafa;
+  --texto-secundario: #a1a1aa;
+  
+  --nav-bg: #09090b;
+  --nav-texto: #fafafa;
+  
+  --footer-bg: #09090b;
+  --footer-texto: #fafafa;
+  --footer-secundario: #a1a1aa;
+  --footer-input-bg: #000000;
+  
+  --oxido: #a42c12;
+  --borde-color: #27272a;
+}
+
+/* Tema CLARO (LIGHT) */
+[data-theme="light"] {
+  --bg-principal: #f4f4f5;
+  --texto-principal: #09090b;
+  --texto-secundario: #52525b;
+  
+  --nav-bg: #ffffff;
+  --nav-texto: #09090b;
+  
+  --footer-bg: #e4e4e7;
+  --footer-texto: #09090b;
+  --footer-secundario: #52525b;
+  --footer-input-bg: #ffffff;
+  
+  --borde-color: #d4d4d8;
+}
+
+/* Transición */
+body {
+  background-color: var(--bg-principal);
+  color: var(--texto-principal);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.bi-github, 
+.bi-linkedin, 
+.footer-social-icon, 
+.nav-social-icon {
+  color: var(--texto-principal);
+  transition: color 0.3s ease; /* Para que el cambio de color sea suave */
+}
+
+ /*Efecto hover para que se pongan color óxido al pasar el mouse */
+.bi-github:hover, 
+.bi-linkedin:hover {
+  color: var(--oxido) !important;
+}
