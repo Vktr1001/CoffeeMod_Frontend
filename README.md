@@ -17,3 +17,9 @@ Encargado de hacer: Login/mi perfil, carrito | wireframe figma.
 ```bash
 # Run the Spring Boot application
 ./mvnw spring-boot:run
+
+# Dev LuisAngel
+Dev Web Luis Angel
+```
+
+César Joseph Luna chiu - Desarrollador de software

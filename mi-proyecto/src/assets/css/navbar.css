@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Space+Grotesk:wght@500;700&display=swap");
+
+:root {
+  --negro: #09090b;
+  --ceniza: #fafafa;
+  --oxido: #a42c12;
+}
+
+/* barra de aviso */
+.nav-aviso {
+  padding: 9px;
+  background: var(--negro);
+  color: var(--ceniza);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 12px;
+  text-align: center;
+}
+
+.navbar-cm {
+  background: var(--ceniza);
+  border-bottom: 1px solid var(--negro);
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.navbar-cm .nav-link {
+  color: var(--negro);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.navbar-cm .nav-link:hover {
+  color: var(--oxido);
+}
+
+/* link de la pagina actual */
+.navbar-cm .nav-link.active {
+  text-decoration: underline 2px var(--oxido);
+  text-underline-offset: 6px;
+}
+
+.nav-logo {
+  font-weight: 700;
+  line-height: 1;
+}
+
+.nav-logo span {
+  color: var(--oxido);
+}
+
+/* boton hamburguesa cuadrado */
+.navbar-cm .navbar-toggler {
+  border: 1px solid var(--negro);
+  border-radius: 0;
+}
+
+.nav-contador {
+  padding: 0 6px;
+  background: var(--oxido);
+  color: var(--ceniza);
+  font-size: 11px;
+}
