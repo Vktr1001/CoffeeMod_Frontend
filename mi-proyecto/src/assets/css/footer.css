@@ -25,19 +25,8 @@ html, body {
 }
 
 .footer-logo {
-  font-weight: 700;
-  line-height: 1;
   font-size: 1.4rem;
-  letter-spacing: 1px;
   color: var(--footer-texto);
-}
-
-.footer-logo .logo-cuadro {
-  display: inline-block;
-  width: 10px;
-  height: 14px;
-  background-color: var(--oxido);
-  margin-left: 4px;
 }
 
 .footer-texto {
@@ -67,12 +56,6 @@ html, body {
   color: var(--oxido);
 }
 
-.footer-newsletter-titulo {
-  font-weight: 700;
-  font-size: 1.3rem;
-  color: var(--footer-texto);
-}
-
 .footer-input {
   background-color: var(--footer-input-bg);
   border: 1px solid var(--borde-color);
@@ -80,6 +63,10 @@ html, body {
   color: var(--footer-texto);
   font-size: 13px;
   padding: 10px 12px;
+}
+
+.footer-input::placeholder {
+  color: var(--footer-secundario);
 }
 
 .footer-input:focus {
@@ -120,4 +107,4 @@ html, body {
 
 .footer-link-sub:hover {
   color: var(--footer-texto);
-}
+}
