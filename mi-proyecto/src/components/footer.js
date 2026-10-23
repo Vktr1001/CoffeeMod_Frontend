@@ -1,4 +1,3 @@
-import '../assets/css/footer.css';
 import { crearLogo } from './logo.js';
 
 const seccionTienda = [
