@@ -1,21 +1,11 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap-icons/font/bootstrap-icons.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import { crearNavbar } from './components/navbar.js';
-import { crearFooter } from './components/footer.js'; 
-import { crearPaginaNosotros } from './components/acercaNosotros.js';
+import { crearFooter } from './components/footer.js';
 
-// pone el navbar arriba de la pagina
+// navbar arriba
 document.querySelector('#header').innerHTML = crearNavbar('nosotros');
 
-
-//inyectar el contenido en class main-content
-const contenedorPrincipal = document.querySelector('.main-content');
-
-if (contenedorPrincipal){
-    contenedorPrincipal.innerHTML = crearPaginaNosotros();
-}
-
-
-// Pone el footer abajo de la página
+// footer abajo
 document.querySelector('#footer').innerHTML = crearFooter();
-

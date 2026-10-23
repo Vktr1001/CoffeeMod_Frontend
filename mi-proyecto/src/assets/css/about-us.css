@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=JetBrains+Mono&family=Space+Grotesk:wght@500;700&display=swap");
+
+/* colores de la guia v2 */
+:root {
+  --negro: #09090b;
+  --ceniza: #fafafa;
+  --oxido: #a42c12;
+  --gris: #a1a1aa;
+}
+
+.about-pagina {
+  background: var(--negro);
+  color: var(--ceniza);
+  font-family: "Inter", sans-serif;
+}
+
+.about-titulos {
+  font-family: "Space Grotesk", sans-serif;
+  letter-spacing: -0.03em;
+}
+
+/* texto chico tipo dato */
+.about-mono {
+  color: var(--gris);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 13px;
+  letter-spacing: 0.06em;
+}
+
+.about-rol {
+  color: var(--oxido);
+}
+
+/* texto 1001 LABS atras de la foto */
+.about-fondo {
+  color: #26262b;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+/* animacion: el texto sube cuando cambia de persona */
+@keyframes subir {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.carousel-item.active .about-info {
+  animation: subir 0.6s ease;
+}
+
+/* miniaturas: le quito el estilo de rayitas a los indicadores de bootstrap */
+#miniaturas-equipo {
+  position: static;
+  justify-content: flex-start;
+  margin: 0;
+}
+
+#miniaturas-equipo button {
+  flex: 0 0 auto;
+  width: 80px;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  text-indent: 0;
+  background: none;
+  border: 0;
+  opacity: 1;
+}
+
+#miniaturas-equipo img {
+  aspect-ratio: 1;
+  border: 3px solid transparent;
+  filter: grayscale(100%);
+  opacity: 0.45;
+  transition: 0.3s;
+}
+
+#miniaturas-equipo span {
+  color: #71717a;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 11px;
+}
+
+#miniaturas-equipo button:hover img,
+#miniaturas-equipo button.active img {
+  filter: none;
+  opacity: 1;
+}
+
+#miniaturas-equipo button.active img {
+  border-color: var(--oxido);
+}
+
+#miniaturas-equipo button.active span {
+  color: var(--ceniza);
+}
