@@ -33,18 +33,13 @@
 }
 
 .nav-logo {
-  font-weight: 700;
-  line-height: 1;
+  font-size: 1.1rem;
   color: var(--nav-texto) !important;
-}
-
-.nav-logo span {
-  color: var(--oxido);
 }
 
 .navbar-cm .navbar-toggler {
   border: 1px solid var(--nav-texto);
-  border-radius: 0;
+  color: var(--nav-texto);
 }
 
 .nav-contador {
@@ -52,4 +47,4 @@
   background: var(--oxido);
   color: #fafafa;
   font-size: 11px;
-}
+}

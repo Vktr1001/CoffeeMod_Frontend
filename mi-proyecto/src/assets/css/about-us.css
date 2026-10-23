@@ -32,14 +32,27 @@
   font-family: "Space Grotesk", sans-serif;
 }
 
-/* animacion: el texto sube cuando cambia de persona */
-@keyframes subir {
-  from { opacity: 0; transform: translateY(20px); }
-  to   { opacity: 1; transform: translateY(0); }
+/* todas las slides en la misma celda para que no cambie la altura */
+#slides-equipo {
+  display: grid;
 }
 
-.carousel-item.active .about-info {
-  animation: subir 0.6s ease;
+#slides-equipo .carousel-item {
+  display: block;
+  grid-area: 1 / 1;
+  margin-right: 0;
+  background: var(--bg-principal);
+}
+
+/* el texto que se va se esconde y el nuevo aparece al terminar el cambio */
+.about-info {
+  transition: opacity 0.3s;
+}
+
+.carousel-item:not(.active) .about-info,
+.carousel-item.active.carousel-item-start .about-info,
+.carousel-item.active.carousel-item-end .about-info {
+  opacity: 0;
 }
 
 /* miniaturas: le quito el estilo de rayitas a los indicadores de bootstrap */
@@ -87,4 +100,17 @@
 
 #miniaturas-equipo button.active span {
   color: var(--texto-principal);
+}
+
+/* redes y flechas cambian con el tema */
+.about-red,
+.about-btn {
+  color: var(--texto-principal);
+  border-color: var(--texto-principal);
+}
+
+.about-red:hover,
+.about-btn:hover {
+  color: var(--oxido);
+  border-color: var(--oxido);
 }

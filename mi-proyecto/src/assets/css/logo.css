@@ -1,0 +1,14 @@
+.logo-grano {
+  height: 2.5em;
+}
+
+.logo-texto {
+  font-family: "Space Grotesk", sans-serif;
+  letter-spacing: -0.02em;
+}
+
+.logo-cuadro {
+  width: 0.38em;
+  height: 0.9em;
+  background: var(--oxido);
+}
