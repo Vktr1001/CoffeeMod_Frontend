@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Space+Grotesk:wght@500;700&display=swap");
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+#app-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+}
+
+/* Estilos dinámicos para el Footer */
+.footer-cm {
+  background-color: var(--footer-bg);
+  color: var(--footer-texto);
+  font-family: "Space Grotesk", sans-serif;
+  border-top: 1px solid var(--borde-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.footer-logo {
+  font-weight: 700;
+  line-height: 1;
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+  color: var(--footer-texto);
+}
+
+.footer-logo .logo-cuadro {
+  display: inline-block;
+  width: 10px;
+  height: 14px;
+  background-color: var(--oxido);
+  margin-left: 4px;
+}
+
+.footer-texto {
+  font-size: 13px;
+  line-height: 1.4;
+  color: var(--footer-secundario) !important;
+}
+
+.footer-titulo {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  color: var(--footer-secundario);
+}
+
+.footer-link {
+  color: var(--footer-texto);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 400;
+  transition: opacity 0.2s ease;
+}
+
+.footer-link:hover {
+  opacity: 0.7;
+  color: var(--oxido);
+}
+
+.footer-newsletter-titulo {
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: var(--footer-texto);
+}
+
+.footer-input {
+  background-color: var(--footer-input-bg);
+  border: 1px solid var(--borde-color);
+  border-radius: 0;
+  color: var(--footer-texto);
+  font-size: 13px;
+  padding: 10px 12px;
+}
+
+.footer-input:focus {
+  background-color: var(--footer-input-bg);
+  border-color: var(--oxido);
+  color: var(--footer-texto);
+  box-shadow: none;
+}
+
+.footer-btn {
+  background-color: var(--oxido);
+  color: #fafafa;
+  border-radius: 0;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding: 10px 20px;
+  border: none;
+}
+
+.footer-hr {
+  border-color: var(--borde-color);
+  opacity: 1;
+}
+
+.footer-bottom {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 11px;
+  color: var(--footer-secundario) !important;
+}
+
+.footer-link-sub {
+  color: var(--footer-secundario);
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+.footer-link-sub:hover {
+  color: var(--footer-texto);
+}
