@@ -1,27 +1,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=JetBrains+Mono&family=Space+Grotesk:wght@500;700&display=swap");
 
-/* colores de la guia v2 */
-:root {
-  --negro: #09090b;
-  --ceniza: #fafafa;
-  --oxido: #a42c12;
-  --gris: #a1a1aa;
-}
-
+/* Contenedor principal de la página (dinámico según data-theme) */
 .about-pagina {
-  background: var(--negro);
-  color: var(--ceniza);
+  background: var(--bg-principal);
+  color: var(--texto-principal);
   font-family: "Inter", sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .about-titulos {
   font-family: "Space Grotesk", sans-serif;
   letter-spacing: -0.03em;
+  color: var(--texto-principal);
 }
 
 /* texto chico tipo dato */
 .about-mono {
-  color: var(--gris);
+  color: var(--texto-secundario);
   font-family: "JetBrains Mono", monospace;
   font-size: 13px;
   letter-spacing: 0.06em;
@@ -31,9 +26,9 @@
   color: var(--oxido);
 }
 
-/* texto 1001 LABS atras de la foto */
+/* texto 1001 LABS atras de la foto en el carrusel */
 .about-fondo {
-  color: #26262b;
+  color: var(--borde-color);
   font-family: "Space Grotesk", sans-serif;
 }
 
@@ -75,7 +70,7 @@
 }
 
 #miniaturas-equipo span {
-  color: #71717a;
+  color: var(--texto-secundario);
   font-family: "JetBrains Mono", monospace;
   font-size: 11px;
 }
@@ -91,5 +86,5 @@
 }
 
 #miniaturas-equipo button.active span {
-  color: var(--ceniza);
+  color: var(--texto-principal);
 }
