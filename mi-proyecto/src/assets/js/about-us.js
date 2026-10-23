@@ -73,7 +73,7 @@ const equipo = [
     resumen: 'Participo en la lógica de negocio y en el desarrollo backend con Java y Spring Boot.',
     bio: 'Soy programador Java con enfoque en backend. Quiero seguir fortaleciendo mis habilidades y convertirme en un desarrollador backend especializado en Java.',
     img: israImg,
-    github: 'https://github.com/Zavalota',
+    github: 'https://github.com/IsraelZarate99',
     linkedin: 'https://www.linkedin.com/in/israel-z%C3%A1rate-torres-336140375/'
   },
   {
