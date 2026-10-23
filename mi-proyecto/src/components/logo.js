@@ -1,4 +1,3 @@
-import '../assets/css/logo.css';
 
 // lo usan navbar y footer, el grano toma el color del texto (currentColor)
 export function crearLogo() {
