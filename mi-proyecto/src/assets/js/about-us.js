@@ -64,7 +64,7 @@ const equipo = [
     resumen: 'De las leyes al software, mi camino ha sido una reinvención impulsada por la curiosidad y el aprendizaje continuo.',
     bio: 'Lo que comenzó con el estudio del Derecho evolucionó hacia una pasión por la tecnología. Participo en todas las etapas del ciclo de vida del software, aplicando metodologías ágiles y buenas prácticas para crear aplicaciones seguras y escalables.',
     img: cesarImg,
-    github: '',
+    github: 'https://github.com/Cesaru19',
     linkedin: 'https://www.linkedin.com/in/cesar-chiu'
   },
   {
