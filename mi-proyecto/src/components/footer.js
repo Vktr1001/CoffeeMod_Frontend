@@ -17,8 +17,7 @@ const seccionAyuda = [
 ];
 
 const seccionLabs = [
-  { texto: 'Taller', href: '#' },
-  { texto: 'Guías', href: '#' },
+  { texto: 'Acerca de nosotros', href: '../about-us.js' },
   { texto: 'Contacto', href: '#' }
 ];
 
