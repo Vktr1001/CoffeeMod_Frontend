@@ -1,70 +1,35 @@
 @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Space+Grotesk:wght@500;700&display=swap");
 
-
-/* Hace que el body y html ocupen toda la altura de la ventana */
-html, body {
-  height: 100%;
-  margin: 0;
-}
-
-/* Estructura en columna que ocupa el 100% como mínimo */
-#app-layout {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-/* Hace que el contenido principal crezca y empuje el footer hacia abajo */
-.main-content {
-  flex: 1;
-}
-
-
-/* Estilos para el Footer de CoffeeMod */
-
+/* Estilos dinámicos para el Footer */
 .footer-cm {
-  background-color: var(--negro);
-  color: var(--ceniza);
+  background-color: var(--footer-bg);
+  color: var(--footer-texto);
   font-family: "Space Grotesk", sans-serif;
-  border-top: 1px solid #1a1a1a;
+  border-top: 1px solid var(--borde-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Logotipo */
 .footer-logo {
-  font-weight: 700;
-  line-height: 1;
   font-size: 1.4rem;
-  letter-spacing: 1px;
-  color: var(--ceniza);
+  color: var(--footer-texto);
 }
 
-.footer-logo .logo-cuadro {
-  display: inline-block;
-  width: 10px;
-  height: 14px;
-  background-color: var(--oxido);
-  margin-left: 4px;
-}
-
-/* Textos secundarios */
 .footer-texto {
   font-size: 13px;
   line-height: 1.4;
-  color: #a1a1aa !important;
+  color: var(--footer-secundario) !important;
 }
 
-/* Títulos de secciones en JetBrains Mono */
 .footer-titulo {
   font-family: "JetBrains Mono", monospace;
   font-size: 11px;
   font-weight: 500;
   letter-spacing: 1.5px;
-  color: #a1a1aa;
+  color: var(--footer-secundario);
 }
 
-/* Enlaces */
 .footer-link {
-  color: var(--ceniza);
+  color: var(--footer-texto);
   text-decoration: none;
   font-size: 14px;
   font-weight: 400;
@@ -73,44 +38,32 @@ html, body {
 
 .footer-link:hover {
   opacity: 0.7;
-  color: var(--ceniza);
-}
-
-/* Título Formulario */
-.footer-newsletter-titulo {
-  font-weight: 700;
-  font-size: 1.3rem;
-  color: var(--ceniza);
-}
-
-/* Formulario de Suscripción */
-.footer-form {
-  max-width: 100%;
+  color: var(--oxido);
 }
 
 .footer-input {
-  background-color: #000000;
-  border: 1px solid #27272a;
+  background-color: var(--footer-input-bg);
+  border: 1px solid var(--borde-color);
   border-radius: 0;
-  color: var(--ceniza);
+  color: var(--footer-texto);
   font-size: 13px;
   padding: 10px 12px;
 }
 
-.footer-input:focus {
-  background-color: #000000;
-  border-color: var(--oxido);
-  color: var(--ceniza);
-  box-shadow: none;
+.footer-input::placeholder {
+  color: var(--footer-secundario);
 }
 
-.footer-input::placeholder {
-  color: #52525b;
+.footer-input:focus {
+  background-color: var(--footer-input-bg);
+  border-color: var(--oxido);
+  color: var(--footer-texto);
+  box-shadow: none;
 }
 
 .footer-btn {
   background-color: var(--oxido);
-  color: var(--ceniza);
+  color: #fafafa;
   border-radius: 0;
   font-family: "JetBrains Mono", monospace;
   font-size: 12px;
@@ -120,30 +73,23 @@ html, body {
   border: none;
 }
 
-.footer-btn:hover {
-  background-color: #8c250e;
-  color: var(--ceniza);
-}
-
-/* Línea separadora */
 .footer-hr {
-  border-color: #27272a;
+  border-color: var(--borde-color);
   opacity: 1;
 }
 
-/* Pie inferior */
 .footer-bottom {
   font-family: "JetBrains Mono", monospace;
   font-size: 11px;
-  color: #a1a1aa !important;
+  color: var(--footer-secundario) !important;
 }
 
 .footer-link-sub {
-  color: #a1a1aa;
+  color: var(--footer-secundario);
   text-decoration: none;
   letter-spacing: 1px;
 }
 
 .footer-link-sub:hover {
-  color: var(--ceniza);
-}
+  color: var(--footer-texto);
+}

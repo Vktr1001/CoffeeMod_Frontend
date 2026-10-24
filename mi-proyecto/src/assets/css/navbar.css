@@ -1,70 +1,50 @@
 @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Space+Grotesk:wght@500;700&display=swap");
 
-:root {
-  --negro: #09090b;
-  --ceniza: #fafafa;
-  --oxido: #a42c12;
-}
-
-/* barra de aviso */
 .nav-aviso {
   padding: 9px;
-  background: var(--negro);
-  color: var(--ceniza);
+  background: var(--bg-principal);
+  color: var(--texto-principal);
   font-family: "JetBrains Mono", monospace;
   font-size: 12px;
   text-align: center;
+  border-bottom: 1px solid var(--borde-color);
 }
 
 .navbar-cm {
-  padding: 12px 16px;
-  background: var(--ceniza);
-  border-bottom: 1px solid var(--negro);
+  background: var(--nav-bg);
+  border-bottom: 1px solid var(--borde-color);
   font-family: "Space Grotesk", sans-serif;
+  transition: background-color 0.3s ease;
 }
 
 .navbar-cm .nav-link {
-  color: var(--negro);
+  color: var(--nav-texto) !important;
   font-size: 14px;
   font-weight: 500;
 }
 
 .navbar-cm .nav-link:hover {
-  color: var(--oxido);
+  color: var(--oxido) !important;
 }
 
-/* link de la pagina actual */
 .navbar-cm .nav-link.active {
   text-decoration: underline 2px var(--oxido);
   text-underline-offset: 6px;
 }
 
 .nav-logo {
-  font-weight: 700;
-  line-height: 1;
+  font-size: 1.1rem;
+  color: var(--nav-texto) !important;
 }
 
-.nav-logo span {
-  color: var(--oxido);
-}
-
-.nav-acciones {
-  gap: 16px;
-  margin-left: auto;
+.navbar-cm .navbar-toggler {
+  border: 1px solid var(--nav-texto);
+  color: var(--nav-texto);
 }
 
 .nav-contador {
   padding: 0 6px;
   background: var(--oxido);
-  color: var(--ceniza);
+  color: #fafafa;
   font-size: 11px;
-}
-
-/* escritorio: links izq, logo centro, acciones der */
-@media (min-width: 992px) {
-  .navbar-cm { padding: 18px 40px; }
-  .navbar-cm .nav-links { order: 1; flex: 1; }
-  .nav-links .navbar-nav { gap: 32px; }
-  .navbar-cm .nav-logo { order: 2; margin: 0; }
-  .navbar-cm .nav-acciones { order: 3; flex: 1; justify-content: flex-end; gap: 28px; margin-left: 0; }
-}
+}

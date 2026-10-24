@@ -1,4 +1,4 @@
-import '../assets/css/footer.css';
+import { crearLogo } from './logo.js';
 
 const seccionTienda = [
   { texto: 'Molinos', href: '#' },
@@ -17,8 +17,7 @@ const seccionAyuda = [
 ];
 
 const seccionLabs = [
-  { texto: 'Taller', href: '#' },
-  { texto: 'Guías', href: '#' },
+  { texto: 'Acerca de nosotros', href: '../about-us.js' },
   { texto: 'Contacto', href: '#' }
 ];
 
@@ -35,7 +34,7 @@ export function crearFooter() {
           <!-- Columna Marca / Logo -->
           <div class="col-12 col-md-3">
             <div class="d-flex align-items-center mb-3">
-              <h5 class="footer-logo m-0">COFFEE<br>MOD<span class="logo-cuadro"></span></h5>
+              <h5 class="footer-logo m-0">${crearLogo()}</h5>
             </div>
             <p class="footer-texto text-secondary mb-1">Equipo de precisión para tu barra.</p>
             <p class="footer-texto text-secondary">Café con precisión.</p>
@@ -65,15 +64,13 @@ export function crearFooter() {
             </ul>
           </div>
 
-          <!-- Columna Taller -->
+          <!-- Columna Novedades -->
           <div class="col-12 col-md-3">
-            <h5 class="footer-newsletter-titulo mb-2">Entra al taller.</h5>
-            <p class="footer-texto text-secondary mb-3">
-              Lanzamientos, guías de calibración y acceso anticipado.
-            </p>
+            <h6 class="footer-titulo mb-3">NOVEDADES</h6>
+            <p class="footer-texto mb-3">Lanzamientos, guías de calibración y acceso anticipado.</p>
             <form class="d-flex footer-form" onsubmit="event.preventDefault();">
               <input type="email" class="form-control footer-input" placeholder="tu@correo.com" required>
-              <button class="btn footer-btn" type="submit">UNIRME</button>
+              <button class="btn footer-btn" type="submit">SUSCRIBIRME</button>
             </form>
           </div>
 
@@ -97,4 +94,4 @@ export function crearFooter() {
       </div>
     </footer>
   `;
-}
+}

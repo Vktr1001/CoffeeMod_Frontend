@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/src/img/Grano.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      try {
+        document.documentElement.dataset.theme = localStorage.getItem('coffeemod-theme') || 'dark';
+      } catch {
+        document.documentElement.dataset.theme = 'dark';
+      }
+    </script>
+    <link rel="stylesheet" href="/src/styles.css" />
+    <title>Contacto | CoffeeMod</title>
+  </head>
+  <body data-pagina="contacto">
+    <div id="header"></div>
+
+    <main class="about-pagina">
+
+      <!-- intro: contacto -->
+      <section class="container-fluid px-4 px-lg-5 py-5">
+        <p class="about-mono mt-lg-4">INICIO / CONTACTO</p>
+        <h1 class="about-titulos display-1 fw-bold">Hablemos de Café.</h1>
+        <p class="lead text-secondary col-lg-7">
+          ¿Dudas sobre tu equipo? Escríbenos.
+        </p>
+      </section>
+
+      <!-- formulario de contacto -->
+      <section class="container-fluid px-4 px-lg-5 py-5 border-top border-secondary border-opacity-25">
+        <p class="about-mono about-rol mb-4">02 // ESCRÍBENOS</p>
+
+        <form id="form-contacto" class="col-lg-7" novalidate>
+
+          <div class="mb-4">
+                <label for="nombre" class="form-label about-mono">NOMBRE</label>
+                <input type="text" id="nombre" name="nombre" class="form-control rounded-0">
+                <div class="invalid-feedback"></div>
+            </div>
+
+            <div class="mb-4">
+                <label for="email" class="form-label about-mono">CORREO ELECTRÓNICO</label>
+                <input type="email" id="email" name="email" class="form-control rounded-0">
+                <div class="invalid-feedback"></div>
+            </div>
+
+            <div class="mb-4">
+                <label for="telefono" class="form-label about-mono">TELÉFONO</label>
+                <input type="tel" id="telefono" name="telefono" class="form-control rounded-0">
+                <div class="invalid-feedback"></div>
+            </div>
+
+            <div class="mb-4">
+                <label for="mensaje" class="form-label about-mono">MENSAJE</label>
+                <textarea id="mensaje" name="mensaje" class="form-control rounded-0" rows="5"></textarea>
+                <div class="invalid-feedback"></div>
+            </div>
+
+            <button type="submit" class="btn rounded-0 px-4">ENVIAR</button>
+          <div id="form-estado" class="mt-3"></div>
+        </form>
+      </section>
+
+    </main>
+
+    <div id="footer"></div>
+
+    <!-- partes comunes (bootstrap, navbar y footer) -->
+    <script type="module" src="/src/main.js"></script>
+    <!-- solo de esta pagina -->
+    <script type="module" src="/src/assets/js/contacto.js"></script>
+  </body>
+</html>
