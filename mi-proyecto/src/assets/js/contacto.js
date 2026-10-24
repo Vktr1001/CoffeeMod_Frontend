@@ -1,6 +1,8 @@
 // script de la pagina de contacto (validacion y envio con formspree)
 
 const formulario = document.querySelector('#form-contacto');
+const estado = document.querySelector('#form-estado');
+const boton = formulario.querySelector('button[type="submit"]');
 
 // pinta el campo en rojo (con mensaje) o en verde
 function marcarCampo(input, error) {
@@ -92,6 +94,10 @@ formulario.addEventListener('submit', async (evento) => {
   }
 
   // envia los datos a formspree sin recargar la pagina
+  boton.disabled = true;
+  boton.textContent = 'ENVIANDO...';
+  estado.textContent = '';
+
   try {
     const respuesta = await fetch('https://formspree.io/f/mgaavwop', {
       method: 'POST',
@@ -100,11 +106,20 @@ formulario.addEventListener('submit', async (evento) => {
     });
 
     if (respuesta.ok) {
-      console.log('Enviado');
+      estado.textContent = 'Gracias, recibimos tu mensaje.';
+      formulario.reset();
+            
+      // quita el verde de los campos ya vacios
+      for (const campo of formulario.querySelectorAll('.is-valid')) {
+        campo.classList.remove('is-valid');
+      }
     } else {
-      console.log('Formspree respondio con error');
+      estado.textContent = 'No se pudo enviar. Intenta de nuevo.';
     }
   } catch (error) {
-    console.log('Sin conexion', error);
+    estado.textContent = 'Sin conexión. Revisa tu internet e intenta de nuevo.';
+  } finally {
+    boton.disabled = false;
+    boton.textContent = 'ENVIAR';
   }
 });
