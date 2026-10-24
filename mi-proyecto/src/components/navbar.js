@@ -5,8 +5,8 @@ import { crearLogo } from './logo.js';
 const links = [
   { id: 'tienda', texto: 'TIENDA', href: '#' },
   { id: 'descubre', texto: 'DESCUBRE', href: '#' },
-  { id: 'nosotros', texto: 'NOSOTROS', href: '#' },
-  { id: 'contacto', texto: 'CONTACTO', href: '#' }
+  { id: 'nosotros', texto: 'NOSOTROS', href: '/' },
+  { id: 'contacto', texto: 'CONTACTO', href: '/contacto.html' }
 ];
 
 // suma los productos del carrito guardado en localStorage
@@ -75,4 +75,4 @@ export function crearNavbar(paginaActiva) {
   }, 100);
 
   return navbarHTML;
-}
+}
