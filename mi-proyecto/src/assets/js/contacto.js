@@ -108,7 +108,7 @@ formulario.addEventListener('submit', async (evento) => {
     if (respuesta.ok) {
       estado.textContent = 'Gracias, recibimos tu mensaje.';
       formulario.reset();
-            
+
       // quita el verde de los campos ya vacios
       for (const campo of formulario.querySelectorAll('.is-valid')) {
         campo.classList.remove('is-valid');
