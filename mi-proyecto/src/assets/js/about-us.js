@@ -1,5 +1,4 @@
 // script de la pagina acerca de nosotros (no es componente, solo se usa aqui)
-import '../css/about-us.css';
 
 import jocelinImg from '../../img/devs/jocelinportafolio.jpg';
 import isaacImg from '../../img/devs/isaacportafolio.jpeg';

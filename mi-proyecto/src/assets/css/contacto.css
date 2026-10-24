@@ -1,0 +1,41 @@
+/* caja del formulario (usa las fuentes y colores de about-us.css y variables.css) */
+.contacto-caja {
+  border: 1px solid var(--borde-color);
+}
+
+.contacto-caja .form-control {
+  background: var(--bg-principal);
+  color: var(--texto-principal);
+  border: 1px solid var(--borde-color);
+  border-radius: 0;
+}
+
+.contacto-caja .form-control::placeholder {
+  color: var(--texto-secundario);
+}
+
+.contacto-caja .form-control:focus {
+  border-color: var(--oxido);
+  box-shadow: none;
+}
+
+.btn-enviar {
+  --bs-btn-bg: var(--oxido);
+  --bs-btn-color: #fff;
+  --bs-btn-hover-bg: #7f1d0b;
+  --bs-btn-hover-color: #fff;
+  border-radius: 0;
+  color: #fff;
+}
+
+.contacto-alerta {
+  background: var(--borde-color);
+  color: var(--texto-principal);
+  border: 0;
+  border-radius: 0;
+  font-size: 0.9rem;
+}
+
+[data-theme="dark"] .contacto-alerta .btn-close {
+  filter: invert(1);
+}

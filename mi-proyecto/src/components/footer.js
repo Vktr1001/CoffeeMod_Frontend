@@ -1,4 +1,3 @@
-import '../assets/css/footer.css';
 import { crearLogo } from './logo.js';
 
 const seccionTienda = [
@@ -18,8 +17,8 @@ const seccionAyuda = [
 ];
 
 const seccionLabs = [
-  { texto: 'Acerca de nosotros', href: '../about-us.js' },
-  { texto: 'Contacto', href: '#' }
+  { texto: 'Acerca de nosotros', href: '/index.html' },
+  { texto: 'Contacto', href: '/contacto.html' }
 ];
 
 export function crearFooter() {
@@ -95,4 +94,4 @@ export function crearFooter() {
       </div>
     </footer>
   `;
-}
+}

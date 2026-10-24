@@ -1,13 +1,12 @@
-import '../assets/css/navbar.css';
 import { toggleTheme } from '../assets/js/theme.js';
 import { crearLogo } from './logo.js';
 
 // links del menu
 const links = [
-  { id: 'tienda', texto: 'TIENDA', href: '#' },
-  { id: 'descubre', texto: 'DESCUBRE', href: '#' },
-  { id: 'nosotros', texto: 'NOSOTROS', href: '#' },
-  { id: 'contacto', texto: 'CONTACTO', href: '#' }
+  { id: 'tienda', texto: 'TIENDA', href: '/tienda.html' },
+  { id: 'descubre', texto: 'DESCUBRE', href: '/descubre.html' },
+  { id: 'nosotros', texto: 'NOSOTROS', href: '/index.html' },
+  { id: 'contacto', texto: 'CONTACTO', href: '/contacto.html' }
 ];
 
 // suma los productos del carrito guardado en localStorage
@@ -76,4 +75,4 @@ export function crearNavbar(paginaActiva) {
   }, 100);
 
   return navbarHTML;
-}
+}
