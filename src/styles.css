@@ -1,8 +1,0 @@
-/*Sirve para que puedan estar disponibles desde el primer render. */
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=JetBrains+Mono&family=Space+Grotesk:wght@500;700&display=swap");
-@import './assets/vendor/bootstrap/bootstrap.min.css';
-@import './assets/vendor/bootstrap-icons/bootstrap-icons.min.css';
-@import './css/variables.css';
-@import './css/navbar.css';
-@import './css/footer.css';
-@import './css/logo.css';

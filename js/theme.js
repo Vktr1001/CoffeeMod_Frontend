@@ -1,20 +1,5 @@
-function obtenerTemaGuardado() {
-  try {
-    return localStorage.getItem('coffeemod-theme') === 'light' ? 'light' : 'dark';
-  } catch {
-    return 'dark';
-  }
-}
-
-function guardarTema(theme) {
-  try {
-    localStorage.setItem('coffeemod-theme', theme);
-  } catch {
-  }
-}
-
 export function initTheme() {
-  const savedTheme = obtenerTemaGuardado();
+  const savedTheme = localStorage.getItem('coffeemod-theme') || 'dark';
   document.documentElement.setAttribute('data-theme', savedTheme);
   actualizarIconoBoton(savedTheme);
 }
@@ -24,11 +9,12 @@ export function toggleTheme() {
   const newTheme = currentTheme === 'light' ? 'dark' : 'light';
   
   document.documentElement.setAttribute('data-theme', newTheme);
-  guardarTema(newTheme);
+  localStorage.setItem('coffeemod-theme', newTheme);
   
   actualizarIconoBoton(newTheme);
 }
 
+// Función auxiliar para cambiar el icono del botón según el tema activo
 function actualizarIconoBoton(theme) {
   const btnToggle = document.getElementById('btn-theme-toggle');
   if (btnToggle) {

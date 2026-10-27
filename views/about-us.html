@@ -2,7 +2,7 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="../src/assets/img/Grano.svg" />
+    <link rel="icon" type="image/svg+xml" href="../assets/img/Grano.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script>
       try {
@@ -11,8 +11,9 @@
         document.documentElement.dataset.theme = 'dark';
       }
     </script>
-    <link rel="stylesheet" href="../src/styles.css" />
-    <link rel="stylesheet" href="../src/css/about-us.css" />
+    <link rel="stylesheet" href="../assets/vendor/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="../assets/vendor/bootstrap-icons/bootstrap-icons.min.css" />
+    <link rel="stylesheet" href="../src/css/styles.css" />
     <title>Acerca de nosotros | CoffeeMod</title>
   </head>
   <body data-pagina="nosotros">
@@ -35,16 +36,11 @@
 
       <section class="container-fluid px-4 px-lg-5 py-5 border-top border-secondary border-opacity-25">
         <p class="about-mono about-rol mb-4">02 // EL EQUIPO</p>
-
         <div id="carruselEquipo" class="carousel slide carousel-fade">
           <div class="carousel-inner" id="slides-equipo"></div>
           <div class="d-flex gap-2 mt-4">
-            <button type="button" class="btn border about-btn rounded-0 px-4" data-bs-target="#carruselEquipo" data-bs-slide="prev" aria-label="Anterior">
-              <i class="bi bi-arrow-left"></i>
-            </button>
-            <button type="button" class="btn border about-btn rounded-0 px-4" data-bs-target="#carruselEquipo" data-bs-slide="next" aria-label="Siguiente">
-              <i class="bi bi-arrow-right"></i>
-            </button>
+            <button type="button" class="btn border about-btn rounded-0 px-4" data-bs-target="#carruselEquipo" data-bs-slide="prev" aria-label="Anterior"><i class="bi bi-arrow-left"></i></button>
+            <button type="button" class="btn border about-btn rounded-0 px-4" data-bs-target="#carruselEquipo" data-bs-slide="next" aria-label="Siguiente"><i class="bi bi-arrow-right"></i></button>
           </div>
           <div class="carousel-indicators d-flex gap-3 mt-4 pb-2 overflow-auto" id="miniaturas-equipo"></div>
         </div>
@@ -53,8 +49,8 @@
 
     <div id="footer"></div>
 
-    <script defer src="../src/assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
-    <script type="module" src="../src/main.js"></script>
-    <script type="module" src="../src/js/about-us.js"></script>
+    <script defer src="../assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+    <script type="module" src="../js/main.js"></script>
+    <script type="module" src="../js/about-us.js"></script>
   </body>
 </html>
