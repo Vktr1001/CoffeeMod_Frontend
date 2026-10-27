@@ -1,12 +1,13 @@
-import { toggleTheme } from '/js/theme.js';
-import { crearLogo } from '/src/components/logo.js';
+import { toggleTheme } from '../js/theme.js';
+import { crearLogo } from './logo.js';
 
 // links del menu
 const links = [
+  { id: 'inicio', texto: 'INICIO', href: '/' },
   { id: 'tienda', texto: 'TIENDA', href: '#' },
   { id: 'descubre', texto: 'DESCUBRE', href: '#' },
-  { id: 'nosotros', texto: 'NOSOTROS', href: './index.html' },
-  { id: 'contacto', texto: 'CONTACTO', href: './views/contacto.html' }
+  { id: 'nosotros', texto: 'NOSOTROS', href: '/views/about-us.html' },
+  { id: 'contacto', texto: 'CONTACTO', href: '/views/contacto.html' }
 ];
 
 // suma los productos del carrito guardado en localStorage
@@ -66,13 +67,9 @@ export function crearNavbar(paginaActiva) {
     </nav>
   `;
 
-  // Retornamos el HTML y agregamos el evento de escucha al botón después de renderizarlo
-  setTimeout(() => {
-    const btnToggle = document.getElementById('btn-theme-toggle');
-    if (btnToggle) {
-      btnToggle.addEventListener('click', toggleTheme);
-    }
-  }, 100);
-
   return navbarHTML;
+}
+
+export function inicializarNavbar() {
+  document.querySelector('#btn-theme-toggle')?.addEventListener('click', toggleTheme);
 }

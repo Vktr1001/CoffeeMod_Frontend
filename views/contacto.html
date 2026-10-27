@@ -2,7 +2,7 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/assets/img/Grano.svg" />
+    <link rel="icon" type="image/svg+xml" href="../src/assets/img/Grano.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script>
       try {
@@ -11,7 +11,8 @@
         document.documentElement.dataset.theme = 'dark';
       }
     </script>
-    <link rel="stylesheet" href="/src/css/styles.css" />
+    <link rel="stylesheet" href="../src/styles.css" />
+    <link rel="stylesheet" href="../src/css/contacto.css" />
     <title>Contacto | CoffeeMod</title>
   </head>
   <body data-pagina="contacto">
@@ -67,9 +68,10 @@
 
     <div id="footer"></div>
 
+    <script defer src="../src/assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
     <!-- partes comunes (bootstrap, navbar y footer) -->
-    <script type="module" src="/js/main.js"></script>
+    <script type="module" src="../src/main.js"></script>
     <!-- solo de esta pagina -->
-    <script type="module" src="/js/contacto.js"></script>
+    <script type="module" src="../src/js/contacto.js"></script>
   </body>
 </html>
