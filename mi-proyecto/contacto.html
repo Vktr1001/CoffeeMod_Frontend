@@ -1,74 +1,75 @@
 <!doctype html>
 <html lang="es">
-
-<!-- Navbar y footer se cargan desde main.js -->
-<!-- Navbar -->
-<head>
+  <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/src/img/Grano.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script>
-        try {
+      try {
         document.documentElement.dataset.theme = localStorage.getItem('coffeemod-theme') || 'dark';
-        } catch {
+      } catch {
         document.documentElement.dataset.theme = 'dark';
-        }
+      }
     </script>
     <link rel="stylesheet" href="/src/styles.css" />
     <title>Contacto | CoffeeMod</title>
-</head>
+  </head>
+  <body data-pagina="contacto">
+    <div id="header"></div>
 
-    <body data-pagina="contacto">
-        <div id="header"></div>
+    <main class="about-pagina">
 
-        <main class="about-pagina">
-            <section class="container-fluid px-4 px-lg-5 py-5">
-                <p class="about-mono mt-lg-4">INICIO / CONTACTO</p>
-                <h1 class="about-titulos display-1 fw-bold">Contáctanos.</h1>
-                <p class="lead text-secondary col-lg-7"> ¿Tienes dudas sobre tu pedido o sobre qué equipo elegir? Escríbenos y te respondemos en menos de 24 horas.
-            </p>
+      <!-- intro: contacto -->
+      <section class="container-fluid px-4 px-lg-5 py-5">
+        <p class="about-mono mt-lg-4">INICIO / CONTACTO</p>
+        <h1 class="about-titulos display-1 fw-bold">Hablemos de Café.</h1>
+        <p class="lead text-secondary col-lg-7">
+          ¿Dudas sobre tu equipo? Escríbenos.
+        </p>
+      </section>
 
-<!-- Container de formulario de contacto -->
-                <div class="contacto-caja p-4 p-lg-5 mt-4 mb-lg-4">
-                    <h2 class="about-titulos h4 fw-bold mb-4">Envíanos un mensaje</h2>
+      <!-- formulario de contacto -->
+      <section class="container-fluid px-4 px-lg-5 py-5 border-top border-secondary border-opacity-25">
+        <p class="about-mono about-rol mb-4">02 // ESCRÍBENOS</p>
 
-                    <form id="formContacto" action="https://formspree.io/f/mgaavwop" method="POST">
-                        <div class="row g-3">
-                        <div class="col-md-6">
-                            <label for="nombre" class="form-label about-mono">NOMBRE</label>
-                            <input type="text" id="nombre" name="nombre" class="form-control" placeholder="Tu nombre" required />
-                        </div>
-                        <div class="col-md-6">
-                            <label for="correo" class="form-label about-mono">CORREO</label>
-                            <input type="email" id="correo" name="email" class="form-control" placeholder="tu@correo.com" required />
-                        </div>
-                        <div class="col-12">
-                            <label for="telefono" class="form-label about-mono">TELÉFONO</label>
-                            <input type="tel" id="telefono" name="telefono" class="form-control" placeholder="Escribe 10 dígitos" inputmode="numeric" maxlength="14" pattern="\d{2}( \d{2}){4}" title="Escribe 10 dígitos" />
-                        </div>
-                        <div class="col-12">
-                            <label for="mensaje" class="form-label about-mono">MENSAJE</label>
-                            <textarea id="mensaje" name="mensaje" class="form-control" rows="4" placeholder="Cuéntanos qué necesitas" required></textarea>
-                        </div>
-                        <div class="col-12">
-                            <button type="submit" class="btn btn-enviar about-mono fw-bold px-4 py-2">ENVIAR MENSAJE</button>
-                        </div>
-                        </div>
-                    </form>
+        <form id="form-contacto" class="col-lg-7" novalidate>
 
-                    <div id="alertaEnviado" class="alert contacto-alerta d-none justify-content-between align-items-center mt-3 mb-0">
-                        <span id="textoAlerta">Mensaje enviado. Te respondemos pronto.</span>
-                        <button type="button" class="btn-close" aria-label="Cerrar"></button>
-                    </div>
-                </div>
-            </section>
-        </main>
+          <div class="mb-4">
+                <label for="nombre" class="form-label about-mono">NOMBRE</label>
+                <input type="text" id="nombre" name="nombre" class="form-control rounded-0">
+                <div class="invalid-feedback"></div>
+            </div>
 
-        <div id="footer"></div>
+            <div class="mb-4">
+                <label for="email" class="form-label about-mono">CORREO ELECTRÓNICO</label>
+                <input type="email" id="email" name="email" class="form-control rounded-0">
+                <div class="invalid-feedback"></div>
+            </div>
 
-<!-- Foother -->
-        <script type="module" src="/src/main.js"></script>
-        
-        <script type="module" src="/src/assets/js/contacto.js"></script>
-</body>
+            <div class="mb-4">
+                <label for="telefono" class="form-label about-mono">TELÉFONO</label>
+                <input type="tel" id="telefono" name="telefono" class="form-control rounded-0">
+                <div class="invalid-feedback"></div>
+            </div>
+
+            <div class="mb-4">
+                <label for="mensaje" class="form-label about-mono">MENSAJE</label>
+                <textarea id="mensaje" name="mensaje" class="form-control rounded-0" rows="5"></textarea>
+                <div class="invalid-feedback"></div>
+            </div>
+
+            <button type="submit" class="btn rounded-0 px-4">ENVIAR</button>
+          <div id="form-estado" class="mt-3"></div>
+        </form>
+      </section>
+
+    </main>
+
+    <div id="footer"></div>
+
+    <!-- partes comunes (bootstrap, navbar y footer) -->
+    <script type="module" src="/src/main.js"></script>
+    <!-- solo de esta pagina -->
+    <script type="module" src="/src/assets/js/contacto.js"></script>
+  </body>
 </html>

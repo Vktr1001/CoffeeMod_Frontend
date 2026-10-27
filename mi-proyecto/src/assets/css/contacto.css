@@ -1,41 +1,36 @@
-/* caja del formulario (usa las fuentes y colores de about-us.css y variables.css) */
-.contacto-caja {
-  border: 1px solid var(--borde-color);
-}
-
-.contacto-caja .form-control {
-  background: var(--bg-principal);
+/* inputs con los colores del tema */
+#form-contacto .form-control {
+  background-color: var(--bg-principal);
   color: var(--texto-principal);
-  border: 1px solid var(--borde-color);
-  border-radius: 0;
+  border-color: var(--borde-color);
 }
 
-.contacto-caja .form-control::placeholder {
-  color: var(--texto-secundario);
-}
-
-.contacto-caja .form-control:focus {
-  border-color: var(--oxido);
+/* input activo: borde oxido, sin brillo azul de bootstrap */
+#form-contacto .form-control:focus {
   box-shadow: none;
-}
-
-.btn-enviar {
-  --bs-btn-bg: var(--oxido);
-  --bs-btn-color: #fff;
-  --bs-btn-hover-bg: #7f1d0b;
-  --bs-btn-hover-color: #fff;
-  border-radius: 0;
-  color: #fff;
-}
-
-.contacto-alerta {
-  background: var(--borde-color);
+  background-color: var(--bg-principal);
   color: var(--texto-principal);
-  border: 0;
-  border-radius: 0;
-  font-size: 0.9rem;
+  border-color: var(--oxido);
 }
 
-[data-theme="dark"] .contacto-alerta .btn-close {
-  filter: invert(1);
+/* mantiene el rojo/verde de la validacion de bootstrap */
+#form-contacto .form-control.is-invalid {
+  border-color: var(--bs-form-invalid-border-color);
+}
+
+#form-contacto .form-control.is-valid {
+  border-color: var(--bs-form-valid-border-color);
+}
+
+/* boton enviar */
+#form-contacto .btn {
+  background-color: var(--oxido);
+  color: #fafafa;
+  border-color: var(--oxido);
+}
+
+/* mensaje de exito / error */
+#form-estado {
+  color: var(--texto-principal);
+  font-weight: bold;
 }

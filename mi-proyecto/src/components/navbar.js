@@ -3,9 +3,9 @@ import { crearLogo } from './logo.js';
 
 // links del menu
 const links = [
-  { id: 'tienda', texto: 'TIENDA', href: '/tienda.html' },
-  { id: 'descubre', texto: 'DESCUBRE', href: '/descubre.html' },
-  { id: 'nosotros', texto: 'NOSOTROS', href: '/index.html' },
+  { id: 'tienda', texto: 'TIENDA', href: '#' },
+  { id: 'descubre', texto: 'DESCUBRE', href: '#' },
+  { id: 'nosotros', texto: 'NOSOTROS', href: '/' },
   { id: 'contacto', texto: 'CONTACTO', href: '/contacto.html' }
 ];
 
