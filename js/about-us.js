@@ -1,14 +1,14 @@
 // script de la pagina acerca de nosotros (no es componente, solo se usa aqui)
 
-import jocelinImg from '../../img/devs/jocelinportafolio.jpg';
-import isaacImg from '../../img/devs/isaacportafolio.jpeg';
-import victorImg from '../../img/devs/victorportafolio.jpg';
-import daniImg from '../../img/devs/daniportafolio.jpg';
-import anaImg from '../../img/devs/anitaportafolio.jpg';
-import cesarImg from '../../img/devs/cesarportafolio.jpg';
-import israImg from '../../img/devs/israportafolio.jpeg';
-import luisImg from '../../img/devs/luisportafolio.jpg';
-import serchImg from '../../img/devs/serchportafolio.jpeg';
+import jocelinImg from '../assets/img/jocelinportafolio.jpg';
+import isaacImg from '../assets/img/isaacportafolio.jpeg';
+import victorImg from '../assets/img/victorportafolio.jpg';
+import daniImg from '../assets/img//daniportafolio.jpg';
+import anaImg from '../assets/img//anitaportafolio.jpg';
+import cesarImg from '../assets/img/cesarportafolio.jpg';
+import israImg from '../assets/img/israportafolio.jpeg';
+import luisImg from '../assets/img/luisportafolio.jpg';
+import serchImg from '../assets/img/serchportafolio.jpeg';
 
 // datos del equipo (salen de las tarjetas del figma)
 const equipo = [
