@@ -1,9 +1,0 @@
-/*Sirve para que puedan estar disponibles desde el primer render. */
-@import 'bootstrap/dist/css/bootstrap.min.css';
-@import 'bootstrap-icons/font/bootstrap-icons.css';
-@import '/src/css/variables.css';
-@import '/src/css/navbar.css';
-@import '/src/css/footer.css';
-@import '/src/css/logo.css';
-@import '/src/css/about-us.css';
-@import '/src/css/contacto.css';

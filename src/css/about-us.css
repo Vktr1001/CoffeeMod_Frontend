@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=JetBrains+Mono&family=Space+Grotesk:wght@500;700&display=swap");
-
 /* Contenedor principal de la página (dinámico según data-theme) */
 .about-pagina {
   background: var(--bg-principal);
