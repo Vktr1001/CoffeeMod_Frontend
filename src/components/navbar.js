@@ -1,12 +1,12 @@
-import { toggleTheme } from '/js/theme.js';
+import { toggleTheme } from '/src/js/theme.js';
 import { crearLogo } from '/src/components/logo.js';
 
 // links del menu
 const links = [
   { id: 'tienda', texto: 'TIENDA', href: '#' },
   { id: 'descubre', texto: 'DESCUBRE', href: '#' },
-  { id: 'nosotros', texto: 'NOSOTROS', href: './index.html' },
-  { id: 'contacto', texto: 'CONTACTO', href: './views/contacto.html' }
+  { id: 'nosotros', texto: 'NOSOTROS', href: '/index.html' },
+  { id: 'contacto', texto: 'CONTACTO', href: '/views/contacto.html' }
 ];
 
 // suma los productos del carrito guardado en localStorage
