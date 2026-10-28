@@ -2,7 +2,7 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="./assets/img/Grano.svg" />
+    <link rel="icon" type="image/svg+xml" href="./src/assets/img/Grano.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script>
       try {
@@ -11,33 +11,17 @@
         document.documentElement.dataset.theme = 'dark';
       }
     </script>
-    <link rel="stylesheet" href="./assets/vendor/bootstrap/bootstrap.min.css" />
-    <link rel="stylesheet" href="./assets/vendor/bootstrap-icons/bootstrap-icons.min.css" />
-    <link rel="stylesheet" href="./src/css/styles.css" />
-    <title>CoffeeMod | Café con precisión</title>
+    <link rel="stylesheet" href="./src/styles.css" />
+    <link rel="stylesheet" href="./src/css/home.css" />
+    <title>CoffeeMod</title>
   </head>
   <body data-pagina="inicio">
     <div id="header"></div>
 
-    <main class="about-pagina">
-      <section class="container-fluid px-4 px-lg-5 py-5 d-flex align-items-center" style="min-height: 65vh">
-        <div class="col-lg-8 py-lg-5">
-          <p class="about-mono mt-lg-4">COFFEEMOD // EQUIPO DE PRECISIÓN</p>
-          <h1 class="about-titulos display-1 fw-bold">Café con precisión.</h1>
-          <p class="lead text-secondary">
-            Encuentra el equipo para preparar mejor café, explicado de forma clara y sin rodeos.
-          </p>
-          <div class="d-flex flex-wrap gap-3 mt-4">
-            <a class="btn border about-btn rounded-0 px-4" href="./views/about-us.html">CONOCE A 1001 LABS</a>
-            <a class="btn border about-btn rounded-0 px-4" href="./views/contacto.html">CONTÁCTANOS</a>
-          </div>
-        </div>
-      </section>
-    </main>
 
     <div id="footer"></div>
 
-    <script defer src="./assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
-    <script type="module" src="./js/main.js"></script>
+    <script defer src="./src/assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+    <script type="module" src="./src/main.js"></script>
   </body>
 </html>
