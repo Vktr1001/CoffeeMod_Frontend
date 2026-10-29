@@ -1,14 +1,24 @@
 import { toggleTheme } from '../js/theme.js';
 import { crearLogo } from './logo.js';
 
-// links del menu
+// si la pagina esta dentro de views/ hay que subir una carpeta
+const base = location.pathname.includes('/views/') ? '../' : './';
+
+// links del menu (rutas relativas)
 const links = [
-  { id: 'inicio', texto: 'INICIO', href: '/' },
-  { id: 'tienda', texto: 'TIENDA', href: '#' },
+  { id: 'inicio', texto: 'INICIO', href: base + 'index.html' },
+  { id: 'tienda', texto: 'TIENDA', href: base + 'views/productos.html' },
   { id: 'descubre', texto: 'DESCUBRE', href: '#' },
-  { id: 'nosotros', texto: 'NOSOTROS', href: '/views/about-us.html' },
-  { id: 'contacto', texto: 'CONTACTO', href: '/views/contacto.html' }
+  { id: 'nosotros', texto: 'NOSOTROS', href: base + 'views/about-us.html' },
+  { id: 'contacto', texto: 'CONTACTO', href: base + 'views/contacto.html' }
 ];
+
+// menu de CUENTA (por ahora solo el formulario de admin)
+const cuenta = `
+  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">CUENTA</a>
+  <ul class="dropdown-menu dropdown-menu-end rounded-0">
+    <li><a class="dropdown-item" href="${base}views/producto-form.html">Agregar producto</a></li>
+  </ul>`;
 
 // suma los productos del carrito guardado en localStorage
 function contarCarrito() {
@@ -37,11 +47,11 @@ export function crearNavbar(paginaActiva) {
 
     <nav class="navbar navbar-expand-lg navbar-cm px-3 px-lg-5 py-3">
       <div class="container-fluid p-0">
-        <a class="navbar-brand nav-logo order-lg-2 m-0" href="/" aria-label="CoffeeMod inicio">${crearLogo()}</a>
+        <a class="navbar-brand nav-logo order-lg-2 m-0" href="${base}index.html" aria-label="CoffeeMod inicio">${crearLogo()}</a>
 
         <ul class="navbar-nav flex-row align-items-center gap-3 gap-lg-4 ms-auto order-lg-3 flex-lg-fill justify-content-lg-end">
           <li class="nav-item d-none d-lg-block"><a class="nav-link" href="#">BUSCAR</a></li>
-          <li class="nav-item d-none d-lg-block"><a class="nav-link" href="#">CUENTA</a></li>
+          <li class="nav-item dropdown d-none d-lg-block">${cuenta}</li>
           <li class="nav-item"><a class="nav-link" href="#">CARRITO ${contador}</a></li>
           
           <!-- Botón de Modo Dark / Light -->
@@ -60,7 +70,7 @@ export function crearNavbar(paginaActiva) {
           <ul class="navbar-nav gap-lg-4 pt-3 pt-lg-0">
             ${menu}
             <li class="nav-item d-lg-none"><a class="nav-link" href="#">BUSCAR</a></li>
-            <li class="nav-item d-lg-none"><a class="nav-link" href="#">CUENTA</a></li>
+            <li class="nav-item dropdown d-lg-none">${cuenta}</li>
           </ul>
         </div>
       </div>
