@@ -1,0 +1,84 @@
+/* ==========================================
+   LAYOUT ADMIN 
+   ========================================== */
+
+/* El body es flex en columna, así que el footer se va al fondo */
+#footer {
+    margin-top: auto;
+}
+
+.admin-layout {
+    display: flex;
+    align-items: stretch;
+}
+
+.admin-content {
+    flex: 1;
+    min-width: 0; /* evita que la tabla desborde */
+    padding: 1.5rem;
+}
+
+/* ==========================================
+   SIDEBAR
+   ========================================== */
+.admin-sidebar {
+    width: 240px;
+    flex-shrink: 0;
+    background-color: var(--bg-principal);
+    border-right: 1px solid var(--borde-color);
+    padding: 1.5rem 1rem;
+}
+
+.side-title {
+    font-family: monospace;
+    font-size: 0.75rem;                
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    color: var(--texto-secundario);
+    margin-bottom: 1.25rem;
+}
+
+.side-link {
+    display: block;
+    padding: 0.8rem 0.9rem;
+    color: var(--texto-principal);
+    text-decoration: none;
+    font-size: 0.8rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    border-left: 3px solid transparent;
+    transition: background-color 0.2s, transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+}
+
+/* Al pasar el mouse el apartado "sale" */
+.side-link:hover {
+    background-color: rgba(128, 128, 128, 0.18);
+    border-left-color: var(--oxido);
+    transform: translateX(6px);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+    font-weight: 600;
+}
+
+/* Apartado activo (rojo) */
+.side-link.active {
+    background-color: var(--oxido);
+    color: #fff;
+    font-weight: 700;                   
+    border-left-color: #fff;
+}
+
+/* Secciones aún no listas: apagadas, pero también reaccionan al hover */
+.side-link.disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.side-link.disabled:hover {
+    opacity: 0.7;
+}
+
+@media (max-width: 991.98px) {
+    .admin-content {
+        padding: 1rem;
+    }
+}
