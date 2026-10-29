@@ -1,7 +1,67 @@
-.home-page {
-  min-height: 65vh;
+body { outline: 10px solid red; }
+
+/* 1. Placeholders: de cajas blancas a superficie con la X de la referencia */
+.home .ratio.bg-light {
+  background:
+    linear-gradient(to top right, transparent calc(50% - .5px), var(--borde-color) 50%, transparent calc(50% + .5px)),
+    linear-gradient(to bottom right, transparent calc(50% - .5px), var(--borde-color) 50%, transparent calc(50% + .5px)),
+    var(--superficie) !important;
+  border-color: var(--borde-color) !important;
+}
+.home .ratio > span {               /* centra el texto [ MOLINO ] */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--fuente-mono);
+  font-size: .65rem;
+  color: var(--texto-secundario) !important;
 }
 
-.home-hero {
-  min-height: 65vh;
+/* 2. Textos y links invisibles */
+.home .text-dark { color: var(--texto-principal) !important; }
+.home .text-dark:hover { color: var(--oxido) !important; }
+.home .text-secondary { color: var(--texto-secundario) !important; }
+.home .text-danger { color: var(--oxido) !important; }
+
+/* 3. Eyebrows ("HECHO PARA LA BARRA", "01 // TIENDA") en mono */
+.home small.text-danger {
+  font-family: var(--fuente-mono);
+  font-weight: 400 !important;
+  letter-spacing: .08em;
 }
+
+/* 4. Botones del hero */
+.home .btn-dark {
+  background: var(--oxido);
+  border-color: var(--oxido);
+  color: #fff;
+}
+.home .btn-dark:hover { filter: brightness(1.15); }
+.home .btn-outline-dark {
+  color: var(--texto-principal);
+  border-color: var(--texto-principal);
+}
+.home .btn-outline-dark:hover {
+  background: var(--texto-principal);
+  color: var(--bg-principal);
+}
+.home .btn { font-size: .75rem; font-weight: 700; letter-spacing: .05em; }
+
+/* 5. Etiquetas: la primera con contorno, la segunda sólida (como en la referencia) */
+.home .badge {
+  font-family: var(--fuente-mono);
+  font-weight: 400;
+  font-size: .6rem;
+  border: 1px solid var(--texto-principal);
+}
+.home .badge.bg-dark { background: transparent !important; color: var(--texto-principal); }
+.home .badge.bg-secondary { background: var(--texto-principal) !important; color: var(--bg-principal); }
+
+/* 6. Precios en mono */
+.home p.text-danger.fw-bold { font-family: var(--fuente-mono); font-size: .875rem; }
+
+/* 7. Tarjetas de la guía y banner "Café del mes" */
+.home .border { border-color: var(--borde-color) !important; }
+.home .col-md-4 > .border.p-4 { border-color: var(--texto-principal) !important; }
+.home .bg-light:not(.ratio) { background: var(--superficie) !important; }
+.home .bg-white { background: var(--bg-principal) !important; }

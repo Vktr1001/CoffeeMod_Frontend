@@ -15,6 +15,11 @@
   
   --oxido: #a42c12;
   --borde-color: #27272a;
+
+  --superficie: #18181b;
+  --fuente-mono: "JetBrains Mono", ui-monospace, monospace;
+  --espacio-seccion: clamp(3rem, 8vw, 6rem);
+
 }
 
 /* Tema CLARO (LIGHT) */
@@ -32,6 +37,9 @@
   --footer-input-bg: #ffffff;
   
   --borde-color: #d4d4d8;
+
+  --superficie: #e4e4e7;
+
 }
 
 /* Transición */
