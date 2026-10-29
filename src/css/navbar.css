@@ -46,3 +46,18 @@
   color: #fafafa;
   font-size: 11px;
 }
+/* menu de CUENTA con los colores del tema */
+.navbar-cm .dropdown-menu {
+  background: var(--nav-bg);
+  border: 1px solid var(--borde-color);
+}
+
+.navbar-cm .dropdown-item {
+  color: var(--nav-texto);
+  font-size: 14px;
+}
+
+.navbar-cm .dropdown-item:hover {
+  background: transparent;
+  color: var(--oxido);
+}
