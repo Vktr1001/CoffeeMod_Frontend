@@ -15,7 +15,7 @@ const links = [
 
 // menu de CUENTA (por ahora solo el formulario de admin)
 const cuenta = `
-  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">CUENTA</a>
+  <a class="nav-link dropdown-toggle" href="producto-form.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">CUENTA</a>
   <ul class="dropdown-menu dropdown-menu-end rounded-0">
     <li><a class="dropdown-item" href="${base}views/producto-form.html">Agregar producto</a></li>
   </ul>`;

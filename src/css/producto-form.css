@@ -1,0 +1,136 @@
+/* ==========================================
+   CARDS DE ESTADÍSTICAS
+   ========================================== */
+.stat-card {
+    background-color: var(--bg-principal); /* Usa el fondo del tema */
+    border: 1px solid var(--borde-color);  /* Borde sutil que sí se ve en oscuro */
+    border-radius: 0;
+    transition: transform 0.2s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-2px); /* Pequeño efecto al pasar el mouse */
+}
+
+.stat-card h3 {
+    color: var(--texto-principal);
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+/* Forzar a que el texto "muted" de bootstrap use tu color secundario */
+.stat-card .text-muted {
+    color: var(--texto-secundario) !important;
+}
+
+/* ==========================================
+   TABLA DE PRODUCTOS
+   ========================================== */
+.table {
+    color: var(--texto-principal);
+    border-color: var(--borde-color);
+}
+
+.table th {
+    background-color: transparent;
+    color: var(--texto-secundario);
+    border-color: var(--borde-color);
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.table td {
+    border-color: var(--borde-color);
+    vertical-align: middle;
+}
+
+/* Efecto hover sutil en las filas */
+.table tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.03); 
+}
+
+/* ==========================================
+   BOTONES DE ACCIÓN (EDITAR / BORRAR)
+   ========================================== */
+.btn-editar {
+    color: var(--texto-secundario); /* Cambiado de #000 a gris claro */
+    text-decoration: underline;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.btn-editar:hover {
+    color: var(--texto-principal); /* Se ilumina al pasar el mouse */
+}
+
+.btn-eliminar {
+    color: var(--oxido); /* Usa tu color de acento en lugar del rojo de bootstrap */
+    text-decoration: underline;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.btn-eliminar:hover {
+    color: #ff4d4d; /* Un rojo más brillante al hacer hover */
+}
+
+.stock-cero {
+    color: var(--oxido) !important;
+    font-weight: bold;
+}
+
+/* ==========================================
+   CORRECCIÓN DE COMPONENTES BOOTSTRAP EN OSCURO
+   (Esto es lo que hacía que se viera blanco)
+   ========================================== */
+.card {
+    background-color: var(--bg-principal);
+    border-color: var(--borde-color);
+}
+
+.form-control, 
+.form-select {
+    background-color: var(--bg-principal);
+    border-color: var(--borde-color);
+    color: var(--texto-principal);
+}
+
+.form-control:focus, 
+.form-select:focus {
+    background-color: var(--bg-principal);
+    border-color: var(--oxido);
+    color: var(--texto-principal);
+    box-shadow: 0 0 0 0.25rem rgba(164, 44, 18, 0.15); /* Resplandor color óxido */
+}
+
+.form-control::placeholder {
+    color: var(--texto-secundario);
+}
+
+/* Opciones del select en oscuro */
+.form-select option {
+    background-color: var(--bg-principal);
+    color: var(--texto-principal);
+}
+
+/* Modal */
+.modal-content {
+    background-color: var(--bg-principal);
+    border: 1px solid var(--borde-color);
+    color: var(--texto-principal);
+}
+
+.modal-header, 
+.modal-footer {
+    border-color: var(--borde-color);
+}
+
+/* Hace que la "X" de cerrar el modal sea blanca en tema oscuro */
+.btn-close {
+    filter: invert(1) grayscale(100%) brightness(200%);
+}

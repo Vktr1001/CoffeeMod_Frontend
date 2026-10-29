@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Productos - Admin</title>
+    <link rel="icon" type="image/svg+xml" href="../src/assets/img/Grano.svg" />
+    <script>
+      try {
+        document.documentElement.dataset.theme = localStorage.getItem('coffeemod-theme') || 'dark';
+      } catch {
+        document.documentElement.dataset.theme = 'dark';
+      }
+    </script>
+    <link rel="stylesheet" href="../src/styles.css" />
+    <link rel="stylesheet" href="../src/css/producto-form.css">
+
+</head>
+<body>
+    <div id="header"></div>
+
+    <div class="container-fluid py-4">
+        <!-- Header -->
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h1 class="h2">PRODUCTOS</h1>
+            <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#productoModal">
+                + AGREGAR PRODUCTO
+            </button>
+        </div>
+
+        <!--cards de estadistica-->
+         <div class="row mb-4">
+            <div class="col-md-3">
+                <div class="card stat-card">
+                    <div class="card-body">
+                        <small class="text-muted">VENTAS DEL MES</small>
+                        <h3>$184,300</h3>
+                        <small class="text-success">+12% VS SEP</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card stat-card">
+                    <div class="card-body">
+                        <small class="text-muted">PEDIDOS</small>
+                        <h3>128</h3>
+                        <small class="text-warning">6 POR ENVIAR</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card stat-card">
+                    <div class="card-body">
+                        <small class="text-muted">PRODUCTOS</small>
+                        <h3>42</h3>
+                        <small class="text-danger">3 SIN STOCK</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card stat-card">
+                    <div class="card-body">
+                        <small class="text-muted">CLIENTES</small>
+                        <h3>310</h3>
+                        <small class="text-success">+24 NUEVOS</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Búsqueda y filtros -->
+        <div class="row mb-3">
+            <div class="col-md-9">
+                <input type="text" class="form-control" id="buscarProducto" placeholder="Buscar por nombre o SKU">
+            </div>
+            <div class="col-md-3">
+                <select class="form-select" id="filtroCategoria">
+                    <option value="">Categoría ↓</option>
+                    <option value="Molino">Molino</option>
+                    <option value="Báscula">Báscula</option>
+                    <option value="Hervidor">Hervidor</option>
+                    <option value="Café">Café</option>
+                </select>
+            </div>
+        </div>
+
+         <!-- Tabla de productos -->
+        <div class="table-responsive">
+            <table class="table table-hover">
+                <thead class="table-dark">
+                    <tr>
+                        <th>SKU</th>
+                        <th>PRODUCTO</th>
+                        <th>CATEGORÍA</th>
+                        <th>NIVEL</th>
+                        <th>STOCK</th>
+                        <th>PRECIO</th>
+                        <th>ACCIONES</th>
+                    </tr>
+                </thead>
+                <tbody id="tablaProductos">
+                    <!-- Se llena con JavaScript -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!--modal para agregar/editar-->
+    <div class="modal fade" id="productoModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Agregar / editar producto</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="formProducto">
+                        <div class="row mb-3">
+                            <div class="col-md-4">
+                                <label class="form-label">NOMBRE</label>
+                                <input type="text" class="form-control" id="nombre" required>
+                            </div>
+                            <div class="col-md-4">
+                                <label class="form-label">CATEGORÍA</label>
+                                <select class="form-select" id="categoria" required>
+                                    <option value="Molino">Molino</option>
+                                    <option value="Báscula">Báscula</option>
+                                    <option value="Hervidor">Hervidor</option>
+                                    <option value="Café">Café</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4">
+                                <label class="form-label">PRECIO</label>
+                                <input type="number" class="form-control" id="precio" step="0.01" required>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-md-4">
+                                <label class="form-label">STOCK</label>
+                                <input type="number" class="form-control" id="stock" required>
+                            </div>
+                            <div class="col-md-4">
+                                <label class="form-label">NIVEL</label>
+                                <select class="form-select" id="nivel" required>
+                                    <option value="Principiante">Principiante</option>
+                                    <option value="Intermedio">Intermedio</option>
+                                    <option value="Avanzado">Avanzado</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4">
+                                <label class="form-label">IMAGEN (URL)</label>
+                                <input type="url" class="form-control" id="imagen">
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">DESCRIPCIÓN</label>
+                            <textarea class="form-control" id="descripcion" rows="3"></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">CANCELAR</button>
+                    <button type="button" class="btn btn-danger" id="btnGuardar">GUARDAR</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer"></div>
+
+    <script defer src="../src/assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+    <script type="module" src="../src/main.js"></script>
+    <script src="../src/js/producto-form.js"></script>
+
+</body>
