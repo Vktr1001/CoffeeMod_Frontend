@@ -1,14 +1,14 @@
 // script de la pagina acerca de nosotros (no es componente, solo se usa aqui)
 
-import jocelinImg from '../../img/devs/jocelinportafolio.jpg';
-import isaacImg from '../../img/devs/isaacportafolio.jpeg';
-import victorImg from '../../img/devs/victorportafolio.jpg';
-import daniImg from '../../img/devs/daniportafolio.jpg';
-import anaImg from '../../img/devs/anitaportafolio.jpg';
-import cesarImg from '../../img/devs/cesarportafolio.jpg';
-import israImg from '../../img/devs/israportafolio.jpeg';
-import luisImg from '../../img/devs/luisportafolio.jpg';
-import serchImg from '../../img/devs/serchportafolio.jpeg';
+const jocelinImg = new URL('../assets/img/jocelinportafolio.jpg', import.meta.url).href;
+const isaacImg = new URL('../assets/img/isaacportafolio.jpeg', import.meta.url).href;
+const victorImg = new URL('../assets/img/victorportafolio.jpg', import.meta.url).href;
+const daniImg = new URL('../assets/img/daniportafolio.jpg', import.meta.url).href;
+const anaImg = new URL('../assets/img/anitaportafolio.jpg', import.meta.url).href;
+const cesarImg = new URL('../assets/img/cesarportafolio.jpg', import.meta.url).href;
+const israImg = new URL('../assets/img/israportafolio.jpeg', import.meta.url).href;
+const luisImg = new URL('../assets/img/luisportafolio.jpg', import.meta.url).href;
+const serchImg = new URL('../assets/img/serchportafolio.jpeg', import.meta.url).href;
 
 // datos del equipo (salen de las tarjetas del figma)
 const equipo = [
