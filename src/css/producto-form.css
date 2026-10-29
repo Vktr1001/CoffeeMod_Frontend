@@ -1,0 +1,167 @@
+/* ==========================================
+   CARDS DE ESTADÍSTICAS
+   ========================================== */
+.stat-card {
+    background-color: var(--bg-principal);
+    border: 1px solid var(--borde-color);
+    border-radius: 0;
+    transition: transform 0.2s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-2px);
+}
+
+.stat-card h3 {
+    color: var(--texto-principal);
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.stat-card .text-muted {
+    color: var(--texto-secundario) !important;
+}
+
+/* ==========================================
+   TABLA DE PRODUCTOS
+   ========================================== */
+.table {
+    color: var(--texto-principal);
+    border-color: var(--borde-color);
+}
+
+.table th {
+    background-color: transparent;
+    color: var(--texto-secundario);
+    border-color: var(--borde-color);
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.table td {
+    border-color: var(--borde-color);
+    vertical-align: middle;
+}
+
+/* ----- MODO OSCURO: gris para que se note dónde empieza y termina ----- */
+[data-theme="dark"] .table-responsive {
+    border: 1px solid #34353f;          /* marco visible alrededor de la tabla */
+}
+
+[data-theme="dark"] .table {
+    --bs-table-color: var(--texto-principal);
+    --bs-table-bg: #16171c;             /* filas */
+    --bs-table-hover-bg: #262730;       /* fila al pasar el mouse */
+    --bs-table-hover-color: var(--texto-principal);
+    --bs-table-border-color: #2c2d36;   /* líneas entre filas */
+    margin-bottom: 0;
+}
+
+/* filas alternas un poco más claras */
+[data-theme="dark"] .table tbody tr:nth-child(even) > td {
+    --bs-table-bg: #1c1d24;
+}
+
+/* encabezado más oscuro con línea de acento abajo */
+[data-theme="dark"] .table thead th {
+    background-color: #0c0c10;
+    color: #b9bac4;
+    border-bottom: 2px solid var(--oxido);
+}
+
+/* ==========================================
+   BOTONES DE ACCIÓN (EDITAR / BORRAR)
+   ========================================== */
+.btn-editar,
+.btn-eliminar {
+    background: transparent;
+    border-radius: 999px;               /* forma de píldora */
+    padding: 0.25rem 0.9rem;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s, transform 0.15s;
+}
+
+.btn-editar + .btn-eliminar {
+    margin-left: 0.4rem;
+}
+
+.btn-editar {
+    color: var(--texto-secundario);
+    border: 1px solid var(--borde-color);
+}
+
+.btn-editar:hover {
+    color: var(--texto-principal);
+    border-color: var(--texto-principal);
+    background-color: rgba(128, 128, 128, 0.15);
+    transform: translateY(-1px);
+}
+
+.btn-eliminar {
+    color: var(--oxido);
+    border: 1px solid var(--oxido);
+}
+
+.btn-eliminar:hover {
+    color: #fff;
+    background-color: var(--oxido);
+    transform: translateY(-1px);
+}
+
+.stock-cero {
+    color: var(--oxido) !important;
+    font-weight: bold;
+}
+
+/* ==========================================
+   CORRECCIÓN DE COMPONENTES BOOTSTRAP EN OSCURO
+   ========================================== */
+.card {
+    background-color: var(--bg-principal);
+    border-color: var(--borde-color);
+}
+
+.form-control,
+.form-select {
+    background-color: var(--bg-principal);
+    border-color: var(--borde-color);
+    color: var(--texto-principal);
+}
+
+.form-control:focus,
+.form-select:focus {
+    background-color: var(--bg-principal);
+    border-color: var(--oxido);
+    color: var(--texto-principal);
+    box-shadow: 0 0 0 0.25rem rgba(164, 44, 18, 0.15);
+}
+
+.form-control::placeholder {
+    color: var(--texto-secundario);
+}
+
+.form-select option {
+    background-color: var(--bg-principal);
+    color: var(--texto-principal);
+}
+
+/* Modal */
+.modal-content {
+    background-color: var(--bg-principal);
+    border: 1px solid var(--borde-color);
+    color: var(--texto-principal);
+}
+
+.modal-header,
+.modal-footer {
+    border-color: var(--borde-color);
+}
+
+.btn-close {
+    filter: invert(1) grayscale(100%) brightness(200%);
+}

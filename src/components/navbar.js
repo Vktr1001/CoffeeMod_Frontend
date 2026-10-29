@@ -17,7 +17,12 @@ const links = [
 const cuenta = `
   <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">CUENTA</a>
   <ul class="dropdown-menu dropdown-menu-end rounded-0">
-    <li><a class="dropdown-item" href="${base}views/producto-form.html">Agregar producto</a></li>
+    <li><h6 class="dropdown-header">ADMINISTRACIÓN</h6></li>
+    <li><a class="dropdown-item" href="${base}views/producto-form.html">Resumen</a></li>
+    <li><a class="dropdown-item" href="${base}views/producto-form.html">Productos</a></li>
+    <li><a class="dropdown-item" href="${base}views/producto-form.html">Pedidos</a></li>
+    <li><a class="dropdown-item" href="${base}views/producto-form.html">Clientes</a></li>
+    <li><a class="dropdown-item" href="${base}views/producto-form.html">Inventario</a></li>
   </ul>`;
 
 // suma los productos del carrito guardado en localStorage
