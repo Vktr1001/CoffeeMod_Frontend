@@ -1,12 +1,16 @@
 import { crearLogo } from './logo.js';
 
+// si la pagina esta dentro de views/ hay que subir una carpeta
+const base = location.pathname.includes('/views/') ? '../' : './';
+const tienda = base + 'views/productos.html';
+
 const seccionTienda = [
-  { texto: 'Molinos', href: '#' },
-  { texto: 'Básculas', href: '#' },
-  { texto: 'Hervidores', href: '#' },
-  { texto: 'Métodos', href: '#' },
-  { texto: 'Accesorios', href: '#' },
-  { texto: 'Café', href: '#' }
+  { texto: 'Molinos', href: tienda },
+  { texto: 'Básculas', href: tienda },
+  { texto: 'Hervidores', href: tienda },
+  { texto: 'Métodos', href: tienda },
+  { texto: 'Accesorios', href: tienda },
+  { texto: 'Café', href: tienda }
 ];
 
 const seccionAyuda = [
@@ -17,8 +21,8 @@ const seccionAyuda = [
 ];
 
 const seccionLabs = [
-  { texto: 'Acerca de nosotros', href: '/views/about-us.html' },
-  { texto: 'Contacto', href: '/views/contacto.html' }
+  { texto: 'Acerca de nosotros', href: base + 'views/about-us.html' },
+  { texto: 'Contacto', href: base + 'views/contacto.html' }
 ];
 
 export function crearFooter() {
