@@ -31,7 +31,7 @@
 
 .side-title {
     font-family: monospace;
-    font-size: 0.85rem;                 /* más grande */
+    font-size: 0.75rem;                
     font-weight: 600;
     letter-spacing: 0.12em;
     color: var(--texto-secundario);
@@ -63,7 +63,7 @@
 .side-link.active {
     background-color: var(--oxido);
     color: #fff;
-    font-weight: 700;                   /* negrita */
+    font-weight: 700;                   
     border-left-color: #fff;
 }
 

@@ -17,7 +17,7 @@ function renderizarTabla() {
     //recorrer cada producto: toma el array de productos y recorre uno por uno
     //por cada producto, ejecuta todo lo que esta dentro de las llaves
     productos.forEach(producto => {
-        //si el stock del producto es 0, la variable stockClass vale 'stock-cero' y si no, es bacio
+        //si el stock del producto es 0, la variable stockClass vale 'stock-cero' y si no, es vacio
         const stockClass = producto.stock === 0 ? 'stock-cero' : '';
         //crear fila de producto html
         const row = `
@@ -34,7 +34,7 @@ function renderizarTabla() {
                 </td>
             </tr>
         `;
-        //insertar la fila en la tabla "anade esto a lo que ya hay"
+        //insertar la fila en la tabla "añade esto a lo que ya hay"
         tbody.innerHTML += row;
     });
 }
