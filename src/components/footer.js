@@ -1,12 +1,16 @@
 import { crearLogo } from './logo.js';
 
+// si la pagina esta dentro de views/ hay que subir una carpeta
+const base = location.pathname.includes('/views/') ? '../' : './';
+const tienda = base + 'views/productos.html';
+
 const seccionTienda = [
-  { texto: 'Molinos', href: '#' },
-  { texto: 'Básculas', href: '#' },
-  { texto: 'Hervidores', href: '#' },
-  { texto: 'Métodos', href: '#' },
-  { texto: 'Accesorios', href: '#' },
-  { texto: 'Café', href: '#' }
+  { texto: 'Molinos', href: tienda + '?categoria=molinos' },
+  { texto: 'Básculas', href: tienda + '?categoria=basculas' },
+  { texto: 'Hervidores', href: tienda + '?categoria=hervidores' },
+  { texto: 'Métodos', href: tienda + '?categoria=metodos' },
+  { texto: 'Accesorios', href: tienda + '?categoria=accesorios' },
+  { texto: 'Café', href: tienda + '?categoria=cafe' }
 ];
 
 const seccionAyuda = [
@@ -17,7 +21,7 @@ const seccionAyuda = [
 ];
 
 const seccionLabs = [
-  { texto: 'Acerca de nosotros', href: '/js/about-us.js' },
+  { texto: 'Acerca de nosotros', href: '../about-us.js' },
   { texto: 'Contacto', href: '#' }
 ];
 
