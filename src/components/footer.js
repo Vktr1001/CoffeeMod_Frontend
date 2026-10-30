@@ -5,12 +5,12 @@ const base = location.pathname.includes('/views/') ? '../' : './';
 const tienda = base + 'views/productos.html';
 
 const seccionTienda = [
-  { texto: 'Molinos', href: tienda },
-  { texto: 'Básculas', href: tienda },
-  { texto: 'Hervidores', href: tienda },
-  { texto: 'Métodos', href: tienda },
-  { texto: 'Accesorios', href: tienda },
-  { texto: 'Café', href: tienda }
+  { texto: 'Molinos', href: tienda + '?categoria=molinos' },
+  { texto: 'Básculas', href: tienda + '?categoria=basculas' },
+  { texto: 'Hervidores', href: tienda + '?categoria=hervidores' },
+  { texto: 'Métodos', href: tienda + '?categoria=metodos' },
+  { texto: 'Accesorios', href: tienda + '?categoria=accesorios' },
+  { texto: 'Café', href: tienda + '?categoria=cafe' }
 ];
 
 const seccionAyuda = [

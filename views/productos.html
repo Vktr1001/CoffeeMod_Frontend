@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="../src/assets/img/Grano.svg" />
+    <script>
+      try {
+        document.documentElement.dataset.theme = localStorage.getItem('coffeemod-theme') || 'dark';
+      } catch {
+        document.documentElement.dataset.theme = 'dark';
+      }
+    </script>
+    <link rel="stylesheet" href="../src/styles.css" />
+    <link rel="stylesheet" href="../src/css/productos.css" />
+    <title>Tienda | CoffeeMod</title>
+  </head>
+  <body data-pagina="tienda">
+    <div id="header"></div>
+    <main class="tienda-pagina" id="tienda">
+      <nav class="tienda-migas" aria-label="Ruta de navegación">
+        <a href="../index.html">INICIO</a><span aria-hidden="true"> / </span><span aria-current="page">TIENDA</span>
+      </nav>
+      <header class="tienda-intro">
+        <h1>TIENDA</h1>
+        <p>Equipo de precisión para filtrado y espresso. Filtra por método o por nivel<br class="tienda-salto" /> cuando lo necesites.</p>
+      </header>
+      <div class="tienda-barra">
+        <div class="tienda-categorias" role="group" aria-label="Categoría de producto">
+          <button type="button" data-categoria="todo" aria-pressed="true">TODO</button>
+          <button type="button" data-categoria="molinos" aria-pressed="false">MOLINOS</button>
+          <button type="button" data-categoria="basculas" aria-pressed="false">BÁSCULAS</button>
+          <button type="button" data-categoria="hervidores" aria-pressed="false">HERVIDORES</button>
+          <button type="button" data-categoria="metodos" aria-pressed="false">MÉTODOS</button>
+          <button type="button" data-categoria="accesorios" aria-pressed="false">ACCESORIOS</button>
+          <button type="button" data-categoria="cafe" aria-pressed="false">CAFÉ</button>
+        </div>
+        <div class="tienda-controles">
+          <button type="button" class="tienda-abrir-filtros" aria-expanded="false" aria-controls="tienda-filtros">FILTROS</button>
+          <label class="tienda-orden">
+            <span class="visually-hidden">Ordenar productos</span>
+            <select id="tienda-orden">
+              <option value="vendidos">ORDENAR: MÁS VENDIDOS</option>
+              <option value="precio-asc">PRECIO: MENOR A MAYOR</option>
+              <option value="precio-desc">PRECIO: MAYOR A MENOR</option>
+              <option value="nombre">NOMBRE: A–Z</option>
+            </select>
+          </label>
+        </div>
+      </div>
+      <div class="tienda-layout">
+        <aside class="tienda-filtros" id="tienda-filtros" aria-label="Filtros de productos">
+          <form id="tienda-formulario">
+            <fieldset>
+              <legend>MÉTODO</legend>
+              <label><input type="checkbox" name="metodo" value="filtrado" /> Filtrado (V60, Chemex)</label>
+              <label><input type="checkbox" name="metodo" value="espresso" /> Espresso</label>
+              <label><input type="checkbox" name="metodo" value="prensa" /> Prensa francesa</label>
+              <label><input type="checkbox" name="metodo" value="moka" /> Moka</label>
+            </fieldset>
+            <fieldset>
+              <legend>NIVEL</legend>
+              <label><input type="checkbox" name="nivel" value="principiante" /> Principiante</label>
+              <label><input type="checkbox" name="nivel" value="intermedio" /> Intermedio</label>
+              <label><input type="checkbox" name="nivel" value="avanzado" /> Avanzado</label>
+            </fieldset>
+            <fieldset>
+              <legend>PRECIO</legend>
+              <label><input type="checkbox" name="precio" value="bajo" /> Menos de $2,000</label>
+              <label><input type="checkbox" name="precio" value="medio" /> $2,000 a $6,000</label>
+              <label><input type="checkbox" name="precio" value="alto" /> Más de $6,000</label>
+            </fieldset>
+            <fieldset>
+              <legend>MARCA</legend>
+              <label><input type="checkbox" name="marca" value="Acaia" /> Acaia</label>
+              <label><input type="checkbox" name="marca" value="Weber" /> Weber</label>
+              <label><input type="checkbox" name="marca" value="Fellow" /> Fellow</label>
+              <label><input type="checkbox" name="marca" value="Hario" /> Hario</label>
+            </fieldset>
+            <button type="reset" class="tienda-limpiar" hidden>Limpiar filtros</button>
+          </form>
+        </aside>
+        <section aria-label="Catálogo de productos">
+          <p id="tienda-resultados" class="visually-hidden" role="status" aria-live="polite"></p>
+          <div id="tienda-carga" class="mb-4" role="status" aria-live="polite">
+            <p id="tienda-mensaje-carga" class="small mb-2">Cargando productos…</p>
+            <button id="tienda-reintentar" type="button" class="btn btn-sm btn-outline-secondary" hidden>Reintentar</button>
+          </div>
+          <div class="tienda-grid" id="tienda-productos"></div>
+          <div class="tienda-vacio" id="tienda-vacio" hidden>
+            <h2>No encontramos productos con estos filtros.</h2>
+            <p>Prueba con otra combinación para encontrar tu equipo.</p>
+            <button type="button" id="tienda-restablecer">VER TODO EL EQUIPO</button>
+          </div>
+          <noscript>Activa JavaScript para consultar el catálogo y sus filtros.</noscript>
+        </section>
+      </div>
+    </main>
+
+    <template id="plantilla-producto">
+      <article class="tienda-producto">
+        <div class="tienda-imagen">
+          <img alt="" loading="lazy" decoding="async" hidden />
+          <span data-campo="marcador" aria-hidden="true"></span>
+        </div>
+        <div class="tienda-etiquetas">
+          <span class="tienda-etiqueta" data-campo="tipo"></span>
+          <span class="tienda-etiqueta tienda-nivel" data-campo="nivel"></span>
+        </div>
+        <h2 data-campo="nombre"></h2>
+        <p class="tienda-precio"><span class="visually-hidden">Precio en pesos mexicanos: </span><span data-campo="precio"></span></p>
+        <div class="tienda-compra">
+          <div class="tienda-disponibilidad">
+            <label data-campo="etiqueta-cantidad">Cantidad</label>
+            <span class="tienda-stock" data-campo="stock"></span>
+          </div>
+          <div class="tienda-acciones">
+            <div class="tienda-cantidad" role="group">
+              <button type="button" class="btn btn-sm p-0" data-cantidad-paso="-1">−</button>
+              <input type="number" class="form-control form-control-sm text-center shadow-none" min="1" step="1" value="1" inputmode="numeric" />
+              <button type="button" class="btn btn-sm p-0" data-cantidad-paso="1">+</button>
+            </div>
+            <button type="button" class="btn btn-sm d-flex align-items-center justify-content-center tienda-agregar">
+              <i class="bi bi-bag-plus" aria-hidden="true"></i><span data-campo="texto-agregar">Agregar</span>
+            </button>
+          </div>
+        </div>
+      </article>
+    </template>
+    <div id="footer"></div>
+    <script defer src="../src/assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+    <script type="module" src="../src/main.js"></script>
+    <script type="module" src="../src/js/productos.js"></script>
+  </body>
+</html>
