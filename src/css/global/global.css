@@ -1,0 +1,17 @@
+/* estilos base compartidos por todas las paginitas xd */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+img,
+svg,
+video {
+  max-width: 100%;
+}

@@ -21,8 +21,8 @@ const seccionAyuda = [
 ];
 
 const seccionLabs = [
-  { texto: 'Acerca de nosotros', href: '../about-us.js' },
-  { texto: 'Contacto', href: '#' }
+  { texto: 'Acerca de nosotros', href: base + 'views/about-us.html' },
+  { texto: 'Contacto', href: base + 'views/contacto.html' }
 ];
 
 export function crearFooter() {

@@ -1,5 +1,5 @@
-import { filtrarProductos } from './catalogo.js';
-import { obtenerProductos } from '../services/productos.js';
+import { filtrarProductos } from '../catalogo.js';
+import { obtenerProductos } from '../../services/productos.js';
 
 let productos = [];
 let catalogoCargado = false;
