@@ -1,0 +1,167 @@
+export function renderHome() {
+    return `
+    <! HERO / PRECISIÓN EN CADA MOLIENDA >
+    <section class="container my-5">
+        <div class="row g-4 align-items-center">
+        <div class="col-12">
+            <div class="ratio ratio-21x9 bg-light border d-flex align-items-center justify-content-center">
+    git add         <span class="text-muted">[ FOTO: MOLINO EN BARRA DE TALLER ]</span>
+            </div>
+        </div>
+        <div class="col-12 col-lg-8">
+            <small class="text-uppercase text-danger fw-bold" style="font-size: 0.75rem;">HECHO PARA LA BARRA.</small>
+            <h1 class="display-4 fw-bold mt-1">Precisión en cada molienda.</h1>
+        </div>
+        <div class="col-12 col-lg-4 text-lg-end">
+            <p class="text-secondary small mb-3">Molinos, básculas y hervidores elegidos para que cada taza salga igual de bien. Del primer V60 al espresso de todos los días.</p>
+            <div class="d-flex gap-2 justify-content-lg-end">
+            <a href="#" class="btn btn-dark rounded-0 px-4">VER EQUIPO</a>
+            <a href="#" class="btn btn-outline-dark rounded-0 px-4">CONOCE EL TALLER</a>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <! LO MÁS VENDIDO >
+
+    <section class="container my-5">
+        <div class="d-flex justify-content-between align-items-end mb-4">
+        <div>
+          <small class="text-uppercase text-danger fw-bold" style="font-size: 0.75rem;">02 // LO MÁS VENDIDO</small>
+            <h2 class="fw-bold m-0">PRECISIÓN, MÁS ALLÁ DE LA TAZA</h2>
+        </div>
+        <a href="#" class="text-dark text-decoration-none fw-bold small">TIENDA &rarr;</a>
+        </div>
+        <div class="row g-4">
+
+        <! Producto 1 >
+
+        <div class="col-12 col-sm-6 col-lg-3">
+            <div class="ratio ratio-1x1 bg-light border mb-2 d-flex align-items-center justify-content-center">
+            <span class="text-muted small">[ MOLINO ]</span>
+            </div>
+            <div class="mb-1"><span class="badge bg-dark rounded-pill me-1">MOLINO</span><span class="badge bg-secondary rounded-pill">AVANZADO</span></div>
+            <h5 class="fw-bold mb-0">ORBIT</h5>
+            <p class="text-danger fw-bold mb-1">$12,900</p>
+            <p class="text-secondary small mb-2">Molino de dosis única con fresas de 64 mm. Ajuste sin pasos.</p>
+            <div class="d-flex gap-1"><span class="rounded-circle bg-dark d-inline-block" style="width:12px;height:12px;"></span><span class="rounded-circle bg-secondary d-inline-block" style="width:12px;height:12px;"></span><span class="rounded-circle bg-light border d-inline-block" style="width:12px;height:12px;"></span></div>
+        </div>
+
+        <! Producto 2 >
+
+        <div class="col-12 col-sm-6 col-lg-3">
+            <div class="ratio ratio-1x1 bg-light border mb-2 d-flex align-items-center justify-content-center">
+            <span class="text-muted small">[ BÁSCULA ]</span>
+            </div>
+            <div class="mb-1"><span class="badge bg-dark rounded-pill me-1">BÁSCULA</span><span class="badge bg-secondary rounded-pill">PRINCIPIANTE</span></div>
+            <h5 class="fw-bold mb-0">PYXIS</h5>
+            <p class="text-danger fw-bold mb-1">$3,450</p>
+            <p class="text-secondary small mb-2">Báscula con temporizador y app. Lectura a 0.1 g.</p>
+            <div class="d-flex gap-1"><span class="rounded-circle bg-dark d-inline-block" style="width:12px;height:12px;"></span><span class="rounded-circle bg-light border d-inline-block" style="width:12px;height:12px;"></span></div>
+        </div>
+
+        <! Producto 3 >
+
+        <div class="col-12 col-sm-6 col-lg-3">
+            <div class="ratio ratio-1x1 bg-light border mb-2 d-flex align-items-center justify-content-center">
+            <span class="text-muted small">[ BÁSCULA ]</span>
+            </div>
+            <div class="mb-1"><span class="badge bg-dark rounded-pill me-1">BÁSCULA</span><span class="badge bg-secondary rounded-pill">INTERMEDIO</span></div>
+            <h5 class="fw-bold mb-0">PEARL</h5>
+            <p class="text-danger fw-bold mb-1">$4,200</p>
+            <p class="text-secondary small mb-2">Báscula para filtrado con modos de flujo.</p>
+            <div class="d-flex gap-1"><span class="rounded-circle bg-dark d-inline-block" style="width:12px;height:12px;"></span><span class="rounded-circle bg-light border d-inline-block" style="width:12px;height:12px;"></span></div>
+        </div>
+
+        <! Producto 4 >
+
+        <div class="col-12 col-sm-6 col-lg-3">
+            <div class="ratio ratio-1x1 bg-light border mb-2 d-flex align-items-center justify-content-center">
+            <span class="text-muted small">[ HERVIDOR ]</span>
+            </div>
+            <div class="mb-1"><span class="badge bg-dark rounded-pill me-1">HERVIDOR</span><span class="badge bg-secondary rounded-pill">PRINCIPIANTE</span></div>
+            <h5 class="fw-bold mb-0">BREWISTA</h5>
+            <p class="text-danger fw-bold mb-1">$2,800</p>
+            <p class="text-secondary small mb-2">Hervidor cuello de ganso con control de temperatura.</p>
+            <div class="d-flex gap-1"><span class="rounded-circle bg-dark d-inline-block" style="width:12px;height:12px;"></span><span class="rounded-circle bg-secondary d-inline-block" style="width:12px;height:12px;"></span></div>
+        </div>
+        </div>
+    </section>
+
+    <! EQUIPO (CATEGORÍAS) >
+
+    <section class="container my-5">
+        <div class="d-flex justify-content-between align-items-end mb-4">
+        <div>
+          <small class="text-uppercase text-danger fw-bold" style="font-size: 0.75rem;">03 // TIENDA</small>
+            <h2 class="fw-bold m-0">EQUIPO</h2>
+        </div>
+        <a href="#" class="text-dark text-decoration-none fw-bold small">VER TODO &rarr;</a>
+        </div>
+        <div class="row g-4">
+        <div class="col-12 col-md-4"><div class="ratio ratio-4x3 bg-light border mb-2 d-flex align-items-center justify-content-center"><span class="text-muted small">[ MOLINOS ]</span></div><h6 class="fw-bold text-center">MOLINOS</h6></div>
+        <div class="col-12 col-md-4"><div class="ratio ratio-4x3 bg-light border mb-2 d-flex align-items-center justify-content-center"><span class="text-muted small">[ BÁSCULAS ]</span></div><h6 class="fw-bold text-center">BÁSCULAS</h6></div>
+        <div class="col-12 col-md-4"><div class="ratio ratio-4x3 bg-light border mb-2 d-flex align-items-center justify-content-center"><span class="text-muted small">[ HERVIDORES ]</span></div><h6 class="fw-bold text-center">HERVIDORES</h6></div>
+        <div class="col-12 col-md-4"><div class="ratio ratio-4x3 bg-light border mb-2 d-flex align-items-center justify-content-center"><span class="text-muted small">[ MÉTODOS ]</span></div><h6 class="fw-bold text-center">MÉTODOS</h6></div>
+        <div class="col-12 col-md-4"><div class="ratio ratio-4x3 bg-light border mb-2 d-flex align-items-center justify-content-center"><span class="text-muted small">[ ACCESORIOS ]</span></div><h6 class="fw-bold text-center">ACCESORIOS</h6></div>
+        <div class="col-12 col-md-4"><div class="ratio ratio-4x3 bg-light border mb-2 d-flex align-items-center justify-content-center"><span class="text-muted small">[ CAFÉ ]</span></div><h6 class="fw-bold text-center">CAFÉ</h6></div>
+        </div>
+    </section>
+
+
+    <! GUÍA / ¿POR DÓNDE EMPIEZO? >
+
+    <section class="container my-5">
+      <small class="text-uppercase text-danger fw-bold" style="font-size: 0.75rem;">03 // GUÍA</small>
+        <h2 class="fw-bold">¿POR DÓNDE EMPIEZO?</h2>
+        <p class="text-secondary mb-4">No tienes que elegir al entrar. Usa el nivel como filtro cuando lo necesites.</p>
+
+        <div class="row g-4">
+        <div class="col-12 col-md-4">
+            <div class="border p-4 h-100 d-flex flex-column justify-content-between">
+            <div>
+                <span class="text-danger fw-bold small">01</span>
+                <h3 class="fw-bold h4 mt-1">Principiante</h3>
+                <p class="text-secondary small">Lo básico para tu primer filtrado: báscula, hervidor y un método.</p>
+            </div>
+            <a href="#" class="text-dark text-decoration-none fw-bold small mt-3">VER EQUIPO &rarr;</a>
+            </div>
+        </div>
+        <div class="col-12 col-md-4">
+            <div class="border p-4 h-100 d-flex flex-column justify-content-between">
+            <div>
+                <span class="text-danger fw-bold small">02</span>
+                <h3 class="fw-bold h4 mt-1">Intermedio</h3>
+                <p class="text-secondary small">Un buen molino cambia todo. Control de molienda y receta.</p>
+            </div>
+            <a href="#" class="text-dark text-decoration-none fw-bold small mt-3">VER EQUIPO &rarr;</a>
+            </div>
+        </div>
+        <div class="col-12 col-md-4">
+            <div class="border p-4 h-100 d-flex flex-column justify-content-between">
+            <div>
+                <span class="text-danger fw-bold small">03</span>
+                <h3 class="fw-bold h4 mt-1">Avanzado</h3>
+                <p class="text-secondary small">Espresso, perfiles de flujo y dosis única.</p>
+            </div>
+            <a href="#" class="text-dark text-decoration-none fw-bold small mt-3">VER EQUIPO &rarr;</a>
+            </div>
+        </div>
+        </div>
+
+
+        <! Banner inferior: Café del mes >
+
+        <div class="bg-light border p-3 mt-4 d-flex justify-content-between align-items-center">
+        <div class="d-flex align-items-center gap-3">
+            <div class="bg-white border p-2 text-center" style="min-width: 50px;"><small class="fw-bold">BOLSA</small></div>
+            <div>
+            <small class="text-uppercase text-secondary" style="font-size: 0.7rem;">CAFÉ DEL MES</small>
+            <p class="fw-bold m-0 small">Huila, Colombia - para calibrar tu molino</p>
+            </div>
+        </div>
+        <a href="#" class="text-dark text-decoration-none fw-bold small">VER CAFÉ &rarr;</a>
+        </div>
+    </section>
+    `;
+}
