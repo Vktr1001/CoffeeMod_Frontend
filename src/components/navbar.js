@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-import { toggleTheme } from '/src/js/theme.js';
-import { crearLogo } from '/src/components/logo.js';
-=======
 import { toggleTheme } from '../js/theme.js';
 import { crearLogo } from './logo.js';
->>>>>>> dev-israel
 
 // si la pagina esta dentro de views/ hay que subir una carpeta
 const base = location.pathname.includes('/views/') ? '../' : './';
@@ -14,13 +9,8 @@ const links = [
   { id: 'inicio', texto: 'INICIO', href: base + 'index.html' },
   { id: 'tienda', texto: 'TIENDA', href: base + 'views/productos.html' },
   { id: 'descubre', texto: 'DESCUBRE', href: '#' },
-<<<<<<< HEAD
-  { id: 'nosotros', texto: 'NOSOTROS', href: '/index.html' },
-  { id: 'contacto', texto: 'CONTACTO', href: '/views/contacto.html' }
-=======
   { id: 'nosotros', texto: 'NOSOTROS', href: base + 'views/about-us.html' },
   { id: 'contacto', texto: 'CONTACTO', href: base + 'views/contacto.html' }
->>>>>>> dev-israel
 ];
 
 // menu de CUENTA (por ahora solo el formulario de admin)

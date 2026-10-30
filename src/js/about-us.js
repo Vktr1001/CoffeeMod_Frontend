@@ -1,16 +1,5 @@
 // script de la pagina acerca de nosotros (no es componente, solo se usa aqui)
 
-<<<<<<< HEAD
-import jocelinImg from '/assets/img/jocelinportafolio.jpg';
-import isaacImg from '/assets/img/isaacportafolio.jpeg';
-import victorImg from '/assets/img/victorportafolio.jpg';
-import daniImg from '/assets/img//daniportafolio.jpg';
-import anaImg from '/assets/img//anitaportafolio.jpg';
-import cesarImg from '/assets/img/cesarportafolio.jpg';
-import israImg from '/assets/img/israportafolio.jpeg';
-import luisImg from '/assets/img/luisportafolio.jpg';
-import serchImg from '/assets/img/serchportafolio.jpeg';
-=======
 const jocelinImg = new URL('../assets/img/jocelinportafolio.jpg', import.meta.url).href;
 const isaacImg = new URL('../assets/img/isaacportafolio.jpeg', import.meta.url).href;
 const victorImg = new URL('../assets/img/victorportafolio.jpg', import.meta.url).href;
@@ -20,7 +9,6 @@ const cesarImg = new URL('../assets/img/cesarportafolio.jpg', import.meta.url).h
 const israImg = new URL('../assets/img/israportafolio.jpeg', import.meta.url).href;
 const luisImg = new URL('../assets/img/luisportafolio.jpg', import.meta.url).href;
 const serchImg = new URL('../assets/img/serchportafolio.jpeg', import.meta.url).href;
->>>>>>> dev-israel
 
 // datos del equipo (salen de las tarjetas del figma)
 const equipo = [
