@@ -108,6 +108,11 @@
           <span class="tienda-etiqueta tienda-nivel" data-campo="nivel"></span>
         </div>
         <h2 data-campo="nombre"></h2>
+
+            <!--Botón para ver descripción -->
+        <button type="button" class="tienda-btn-descripcion btn btn-link btn-sm p-0 mb-2" data-bs-toggle="modal" data-bs-target="#modalDescripcion">
+          <i class="bi bi-info-circle" aria-hidden="true"></i> Ver descripción
+        </button>
         <p class="tienda-precio"><span class="visually-hidden">Precio en pesos mexicanos: </span><span data-campo="precio"></span></p>
         <div class="tienda-compra">
           <div class="tienda-disponibilidad">
@@ -131,5 +136,23 @@
     <script defer src="../src/assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
     <script type="module" src="../src/main.js"></script>
     <script type="module" src="../src/js/productos.js"></script>
+
+      <!-- Modal de descripción -->
+    <div class="modal fade" id="modalDescripcion" tabindex="-1" aria-labelledby="modalDescripcionLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalDescripcionLabel">Descripción del producto</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+          </div>
+          <div class="modal-body">
+            <p id="modalDescripcionTexto" class="mb-0"></p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
