@@ -124,3 +124,18 @@
   .tienda-etiqueta { font-size: 7px; padding-inline: 5px; }
   .tienda-imagen span { font-size: 9px; padding-inline: 8px; }
 }
+
+.tienda-btn-descripcion {
+  font-size: 0.85rem;
+  color: var(--color-acento, #8b5e3c);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  transition: opacity 0.2s;
+}
+
+.tienda-btn-descripcion:hover {
+  opacity: 0.7;
+  text-decoration: underline;
+}
