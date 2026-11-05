@@ -1,6 +1,6 @@
 # CoffeeMod ☕️
 
-E-commerce de café de especialidad desarrollado por **1001 Labs** para el bootcamp Generation Java Full Stack.
+E-commerce de café de especialidad desarrollado por **1001 Labs**.
 
 ## Descripción
 
