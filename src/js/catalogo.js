@@ -11,7 +11,7 @@ export const productos = [
     precio: 12900, 
     marca: 'Acaia', 
     metodos: ['filtrado', 'espresso'], 
-    stock: 8, 
+    stock: 7, 
     ventas: 120,
     descripcion: 'Molino eléctrico de alta precisión con fresas de 64mm, ideal para espresso y filtrados con consistencia profesional.'
   },
