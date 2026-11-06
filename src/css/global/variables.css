@@ -41,10 +41,3 @@
   --superficie: #e4e4e7;
 
 }
-
-/* Transición */
-body {
-  background-color: var(--bg-principal);
-  color: var(--texto-principal);
-  transition: background-color 0.3s ease, color 0.3s ease;
-}

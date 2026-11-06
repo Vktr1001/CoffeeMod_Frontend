@@ -4,7 +4,7 @@ export const productos = [
   { 
     id: 'orbit', 
     nombre: 'ORBIT', 
-    imagen: '/src/assets/img/productos/orbit.jpg', 
+    imagen: new URL('../assets/img/productos/orbit.jpg', import.meta.url).href, 
     categoria: 'molinos', 
     tipo: 'MOLINO', 
     nivel: 'avanzado', 
@@ -18,7 +18,7 @@ export const productos = [
   { 
     id: 'key', 
     nombre: 'KEY', 
-    imagen: '/src/assets/img/productos/molino-rectangular-blanco.jpg', 
+    imagen: new URL('../assets/img/productos/molino-rectangular-blanco.jpg', import.meta.url).href, 
     categoria: 'molinos', 
     tipo: 'MOLINO', 
     nivel: 'intermedio', 
@@ -32,7 +32,7 @@ export const productos = [
   { 
     id: 'comandante-c40', 
     nombre: 'COMANDANTE C40', 
-    imagen: '/src/assets/img/productos/molinos-categoria-home.jpg', 
+    imagen: new URL('../assets/img/productos/molinos-categoria-home.jpg', import.meta.url).href, 
     categoria: 'molinos', 
     tipo: 'MOLINO', 
     nivel: 'intermedio', 
@@ -46,7 +46,7 @@ export const productos = [
   { 
     id: 'pyxis', 
     nombre: 'PYXIS', 
-    imagen: '/src/assets/img/productos/bascula-metalica-categoria-home.jpg', 
+    imagen: new URL('../assets/img/productos/bascula-metalica-categoria-home.jpg', import.meta.url).href, 
     categoria: 'basculas', 
     tipo: 'BÁSCULA', 
     nivel: 'principiante', 
@@ -60,7 +60,7 @@ export const productos = [
   { 
     id: 'pearl', 
     nombre: 'PEARL', 
-    imagen: '/src/assets/img/productos/pearl.jpg', 
+    imagen: new URL('../assets/img/productos/pearl.jpg', import.meta.url).href, 
     categoria: 'basculas', 
     tipo: 'BÁSCULA', 
     nivel: 'intermedio', 
@@ -74,7 +74,7 @@ export const productos = [
   { 
     id: 'lunar', 
     nombre: 'LUNAR', 
-    imagen: '/src/assets/img/productos/bascula-negra.jpg', 
+    imagen: new URL('../assets/img/productos/bascula-negra.jpg', import.meta.url).href, 
     categoria: 'basculas', 
     tipo: 'BÁSCULA', 
     nivel: 'avanzado', 
@@ -88,7 +88,7 @@ export const productos = [
   { 
     id: 'stagg-ekg', 
     nombre: 'STAGG EKG', 
-    imagen: '/src/assets/img/productos/hervidor-negro-fp.jpg', 
+    imagen: new URL('../assets/img/productos/hervidor-negro-fp.jpg', import.meta.url).href, 
     categoria: 'hervidores', 
     tipo: 'HERVIDOR', 
     nivel: 'intermedio', 
@@ -102,7 +102,7 @@ export const productos = [
   { 
     id: 'buono', 
     nombre: 'BUONO', 
-    imagen: '/src/assets/img/productos/hervidor-negro-categoria-home.jpg', 
+    imagen: new URL('../assets/img/productos/hervidor-negro-categoria-home.jpg', import.meta.url).href, 
     categoria: 'hervidores', 
     tipo: 'HERVIDOR', 
     nivel: 'principiante', 
@@ -116,7 +116,7 @@ export const productos = [
   { 
     id: 'v60', 
     nombre: 'V60', 
-    imagen: '/src/assets/img/productos/metodos-categoria-home.jpg', 
+    imagen: new URL('../assets/img/productos/metodos-categoria-home.jpg', import.meta.url).href, 
     categoria: 'metodos', 
     tipo: 'MÉTODO', 
     nivel: 'principiante', 
@@ -130,7 +130,7 @@ export const productos = [
   { 
     id: 'prensa-clara', 
     nombre: 'CLARA', 
-    imagen: '/src/assets/img/productos/molinos-rectangulares-blancos.jpg', 
+    imagen: new URL('../assets/img/productos/molinos-rectangulares-blancos.jpg', import.meta.url).href, 
     categoria: 'metodos', 
     tipo: 'MÉTODO', 
     nivel: 'intermedio', 
@@ -144,7 +144,7 @@ export const productos = [
   { 
     id: 'filtros-v60', 
     nombre: 'FILTROS V60', 
-    imagen: '/src/assets/img/productos/molinos-categoria-home-variacion-color.jpg', 
+    imagen: new URL('../assets/img/productos/molinos-categoria-home-variacion-color.jpg', import.meta.url).href, 
     categoria: 'accesorios', 
     tipo: 'ACCESORIO', 
     nivel: 'principiante', 
@@ -158,7 +158,7 @@ export const productos = [
   { 
     id: 'huila', 
     nombre: 'HUILA, COLOMBIA', 
-    imagen: '/src/assets/img/productos/cafe-categoria-home.jpg', 
+    imagen: new URL('../assets/img/productos/cafe-categoria-home.jpg', import.meta.url).href, 
     categoria: 'cafe', 
     tipo: 'CAFÉ', 
     nivel: 'principiante', 
