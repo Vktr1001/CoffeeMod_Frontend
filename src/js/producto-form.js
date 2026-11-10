@@ -68,6 +68,39 @@ function eliminarProducto(sku) {
     }
 }
 
+// Tarea 8 validacion del formulario
+
+function validarSku(valor) {
+    if (valor === '') return 'El SKU es obligatorio.';
+    return '';
+}
+
+function validarNombre(valor) {
+    if (valor === '') return 'El nombre es obligatorio.';
+    if (valor.length < 2) return 'El nombre debe tener al menos 2 letras.';
+    return '';
+}
+
+function validarPrecio(valor) {
+    if (valor === '') return 'El precio es obligatorio.';
+    if (Number(valor) <= 0) return 'El precio debe ser mayor que 0.';
+    return '';
+}
+
+function validarStock(valor) {
+    if (valor === '') return 'El stock es obligatorio.';
+    if (Number(valor) < 0 || !Number.isInteger(Number(valor))) return 'El stock debe ser un número entero de 0 o más.';
+    return '';
+}
+
+function validarImagen(valor) {
+    // la imagen es opcional, pero si la escriben debe ser un link
+    if (valor !== '' && !valor.startsWith('http')) return 'La imagen debe ser un link que empiece con http.';
+    return '';
+}
+
+
+
 document.getElementById('btnGuardar').addEventListener('click', () => {
     // Aquí iría la lógica para guardar
     alert('Producto guardado');
