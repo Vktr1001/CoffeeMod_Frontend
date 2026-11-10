@@ -8,6 +8,15 @@ let productos = [
     { sku: 'SKU-CMD-0103', nombre: 'Huila, Colombia', categoria: 'Café', nivel: 'Principiante', stock: 40, precio: 320 },
 ];
 
+// Tarea 8: si ya hay productos guardados en el navegador, usar esos
+const guardados = localStorage.getItem('coffeemod-productos');
+if (guardados) productos = JSON.parse(guardados);
+
+// Tarea 8: guarda la lista completa en el navegador
+function guardarProductos() {
+    localStorage.setItem('coffeemod-productos', JSON.stringify(productos));
+}
+
 function renderizarTabla() {
     //selecciona el id de la tabla del html
     const tbody = document.getElementById('tablaProductos');
@@ -63,6 +72,7 @@ function eliminarProducto(sku) {
         //crea un nuevo array con la condicion de guardar todos los productos a excepcion de 
         //sku eliminado
         productos = productos.filter(p => p.sku !== sku);
+        guardarProductos();
         //actualiza la tabla
         renderizarTabla();
     }
@@ -72,7 +82,9 @@ function eliminarProducto(sku) {
 
 function validarSku(valor) {
     if (valor === '') return 'El SKU es obligatorio.';
-    if (productos.some(p => p.sku === valor)) return 'Ya existe un producto con ese SKU.';
+    // deben ser exactamente 4 números
+    if (!/^[0-9]{4}$/.test(valor)) return 'El SKU deben ser 4 números.';
+    if (productos.some(p => p.sku === 'SKU-CMD-' + valor)) return 'Ya existe un producto con ese SKU.';
     return '';
 }
 
@@ -114,7 +126,8 @@ function mostrarAlerta(tipo, mensaje) {
 
 document.getElementById('btnGuardar').addEventListener('click', () => {
     // 1. leer lo que escribió el usuario (trim quita espacios de más)
-    const sku = document.getElementById('sku').value.trim();
+    const numeroSku = document.getElementById('sku').value.trim();
+    const sku = 'SKU-CMD-' + numeroSku;
     const nombre = document.getElementById('nombre').value.trim();
     const categoria = document.getElementById('categoria').value;
     const precio = document.getElementById('precio').value.trim();
@@ -125,7 +138,7 @@ document.getElementById('btnGuardar').addEventListener('click', () => {
 
     // 2. validar cada campo y quedarnos solo con los errores
     const errores = [
-        validarSku(sku),
+        validarSku(numeroSku),
         validarNombre(nombre),
         validarPrecio(precio),
         validarStock(stock),
@@ -156,6 +169,7 @@ document.getElementById('btnGuardar').addEventListener('click', () => {
 
     // agregarlo a la tabla, mostrar alerta verde y limpiar el formulario
     productos.push(nuevoProducto);
+    guardarProductos();
     renderizarTabla();
     mostrarAlerta('success', `Producto "${nombre}" guardado correctamente.`);
     document.getElementById('formProducto').reset();
