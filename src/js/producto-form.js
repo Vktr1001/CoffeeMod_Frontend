@@ -72,6 +72,7 @@ function eliminarProducto(sku) {
 
 function validarSku(valor) {
     if (valor === '') return 'El SKU es obligatorio.';
+    if (productos.some(p => p.sku === valor)) return 'Ya existe un producto con ese SKU.';
     return '';
 }
 
@@ -98,8 +99,6 @@ function validarImagen(valor) {
     if (valor !== '' && !valor.startsWith('http')) return 'La imagen debe ser un link que empiece con http.';
     return '';
 }
-
-
 
 // Tarea 8: muestra una alerta de Bootstrap 
 
@@ -139,7 +138,7 @@ document.getElementById('btnGuardar').addEventListener('click', () => {
         return;
     }
 
-        // 4. todo bien: armar el objeto del producto con los datos del formulario
+    // 4. todo bien: armar el objeto del producto con los datos del formulario
     const nuevoProducto = {
         sku: sku,
         nombre: nombre,
