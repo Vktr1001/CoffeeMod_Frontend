@@ -8,6 +8,15 @@ let productos = [
     { sku: 'SKU-CMD-0103', nombre: 'Huila, Colombia', categoria: 'Café', nivel: 'Principiante', stock: 40, precio: 320 },
 ];
 
+// Tarea 8: si ya hay productos guardados en el navegador, usar esos
+const guardados = localStorage.getItem('coffeemod-productos');
+if (guardados) productos = JSON.parse(guardados);
+
+// Tarea 8: guarda la lista completa en el navegador
+function guardarProductos() {
+    localStorage.setItem('coffeemod-productos', JSON.stringify(productos));
+}
+
 function renderizarTabla() {
     //selecciona el id de la tabla del html
     const tbody = document.getElementById('tablaProductos');
@@ -63,14 +72,107 @@ function eliminarProducto(sku) {
         //crea un nuevo array con la condicion de guardar todos los productos a excepcion de 
         //sku eliminado
         productos = productos.filter(p => p.sku !== sku);
+        guardarProductos();
         //actualiza la tabla
         renderizarTabla();
     }
 }
 
+// Tarea 8 validacion del formulario
+
+function validarSku(valor) {
+    if (valor === '') return 'El SKU es obligatorio.';
+    // deben ser exactamente 4 números
+    if (!/^[0-9]{4}$/.test(valor)) return 'El SKU deben ser 4 números.';
+    if (productos.some(p => p.sku === 'SKU-CMD-' + valor)) return 'Ya existe un producto con ese SKU.';
+    return '';
+}
+
+function validarNombre(valor) {
+    if (valor === '') return 'El nombre es obligatorio.';
+    if (valor.length < 2) return 'El nombre debe tener al menos 2 letras.';
+    return '';
+}
+
+function validarPrecio(valor) {
+    if (valor === '') return 'El precio es obligatorio.';
+    if (Number(valor) <= 0) return 'El precio debe ser mayor que 0.';
+    return '';
+}
+
+function validarStock(valor) {
+    if (valor === '') return 'El stock es obligatorio.';
+    if (Number(valor) < 0 || !Number.isInteger(Number(valor))) return 'El stock debe ser un número entero de 0 o más.';
+    return '';
+}
+
+function validarImagen(valor) {
+    // la imagen es opcional, pero si la escriben debe ser un link
+    if (valor !== '' && !valor.startsWith('http')) return 'La imagen debe ser un link que empiece con http.';
+    return '';
+}
+
+// Tarea 8: muestra una alerta de Bootstrap 
+
+function mostrarAlerta(tipo, mensaje) {
+    const alerta = document.getElementById('alertaProducto');
+    alerta.innerHTML = `
+        <div class="alert alert-${tipo} alert-dismissible fade show" role="alert">
+            ${mensaje}
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
+    `;
+}
+
 document.getElementById('btnGuardar').addEventListener('click', () => {
-    // Aquí iría la lógica para guardar
-    alert('Producto guardado');
+    // 1. leer lo que escribió el usuario (trim quita espacios de más)
+    const numeroSku = document.getElementById('sku').value.trim();
+    const sku = 'SKU-CMD-' + numeroSku;
+    const nombre = document.getElementById('nombre').value.trim();
+    const categoria = document.getElementById('categoria').value;
+    const precio = document.getElementById('precio').value.trim();
+    const stock = document.getElementById('stock').value.trim();
+    const nivel = document.getElementById('nivel').value;
+    const imagen = document.getElementById('imagen').value.trim();
+    const descripcion = document.getElementById('descripcion').value.trim();
+
+    // 2. validar cada campo y quedarnos solo con los errores
+    const errores = [
+        validarSku(numeroSku),
+        validarNombre(nombre),
+        validarPrecio(precio),
+        validarStock(stock),
+        validarImagen(imagen)
+    ].filter(error => error !== '');
+
+    // 3. si hay errores, mostrarlos en una alerta roja y no guardar
+    if (errores.length > 0) {
+        mostrarAlerta('danger', errores.join('<br>'));
+        return;
+    }
+
+    // 4. todo bien: armar el objeto del producto con los datos del formulario
+    const nuevoProducto = {
+        sku: sku,
+        nombre: nombre,
+        categoria: categoria,
+        precio: Number(precio),
+        stock: Number(stock),
+        nivel: nivel,
+        imagen: imagen,
+        descripcion: descripcion
+    };
+
+    // convertirlo a formato JSON y mostrarlo en la consola
+    const productoJSON = JSON.stringify(nuevoProducto, null, 2);
+    console.log(productoJSON);
+
+    // agregarlo a la tabla, mostrar alerta verde y limpiar el formulario
+    productos.push(nuevoProducto);
+    guardarProductos();
+    renderizarTabla();
+    mostrarAlerta('success', `Producto "${nombre}" guardado correctamente.`);
+    document.getElementById('formProducto').reset();
 });
 
 // Inicializar
