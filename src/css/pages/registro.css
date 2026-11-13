@@ -1,10 +1,16 @@
 /*Recordatorio personal: padding: arriba derecha abajo izquierda*/
 .IntroRegistro{  
-    position:absolute;
+    /*position:absolute;*/
     padding: 40px 0px 0px 870px;
 }
 
-.CamposUwU{padding: 340px 20px 90px 850px;}
+/*.CamposUwU{ padding: 340px 20px 90px 850px;}*/
+/* Se añadió max-width y centrado automático para evitar anchos absolutos rígidos y mejorar la responsividad*/
+.CamposUwU {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
 
 .imagen{
     position:absolute;

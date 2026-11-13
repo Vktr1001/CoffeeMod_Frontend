@@ -1,65 +1,75 @@
+/* Ya no hacen falta position:absolute ni los paddings enormes */
 .IntroLogin{
-        position:absolute;
-    padding: 120px 0px 0px 870px;
+    padding: 0;
 }
 
 .imagen{
-    position: absolute;
-    padding: 50px;
+    padding: 0;           /* el padding ahora lo da Bootstrap en el HTML */
 }
 
 .Login{
-    position: relative;
-    align-items: baseline;
-    padding: 400px 200px 125px 870px;
+    padding: 0;
 }
 
 .logeo{
     position: relative;
-    align-items:baseline;
-    padding: 10px 0px;
-    
+    padding: 10px 0;
+}
+
+.logeo input[type="checkbox"]{
+    accent-color: var(--oxido);   /* o red / #dc3545 si lo quieres rojo puro */
 }
 
 .logealoB{
- background-color: var(--oxido);
- color:aliceblue;
- border:0;
- padding: 10px 357px;
+    background-color: var(--oxido);
+    color: aliceblue;
+    border: 0;
+    padding: 10px 0;      /* antes 10px 357px; ahora w-100 lo estira */
 }
 
 .linkNegro{
-    align-items: flex;
-     background-color: var(--bg-principal);
-     color: var(--texto-principal);
-     transition: 0.1s;
+    background-color: var(--bg-principal);
+    color: var(--texto-principal);
+    transition: 0.1s;
+    padding-left: 0;
 }
 .linkNegro:hover{
-    color:brown;
+    color: brown;
 }
 
 a{
-    color:aliceblue;
+    color: aliceblue;
     text-decoration: none;
 }
 
 .TeDioAmnesia{
-   padding-left: 111px;
-    align-items: flex-end;
+    padding-left: 0;      /* antes 111px; justify-content-between lo separa */
     color: var(--oxido);
-     background-color: var(--bg-principal);
-     border-color: var(--borde-color);
+    background-color: var(--bg-principal);
+    border-color: var(--borde-color);
 }
 
 .form-control{
-     background-color: var(--bg-principal);
-  color: var(--texto-principal);
-  border-color: gray;
-  font-family: "JetBrains Mono", monospace;
+    background-color: var(--bg-principal);
+    color: var(--texto-principal);
+    border-color: gray;
+    font-family: "JetBrains Mono", monospace;
 }
+.form-control::placeholder{
+    color: #8a8a8a;   /* el color que quieras */
+    opacity: 1;       /* Firefox baja la opacidad por defecto, esto lo evita */
+}
+
 .form-control:focus{
-      box-shadow: none;
-  background-color: var(--bg-principal);
-  color: var(--texto-principal);
-  border-color: var(--oxido);
+    box-shadow: none;
+    background-color: var(--bg-principal);
+    color: var(--texto-principal);
+    border-color: var(--oxido);
+}
+
+/* Ajuste fino para pantallas chicas */
+@media (max-width: 575.98px){
+    .IntroLogin .display-2{
+        font-size: 2.75rem;   /* el display-2 es muy grande en celular */
+    }
 }

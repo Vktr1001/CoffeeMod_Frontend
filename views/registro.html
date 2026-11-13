@@ -10,7 +10,7 @@
       } catch {
         document.documentElement.dataset.theme = 'dark';
       }
-      </script>
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=JetBrains+Mono&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
@@ -26,72 +26,80 @@
     <title>Registro | CoffeeMod</title>
   </head>
   <body>
- <div id="header"></div>
+    <div id="header"></div>
 
-     <section class="IntroRegistro">
-        <small class="text-uppercase text-danger " style="font-size: 0.75rem;">CUENTA NUEVA</small>
-        <h1 class="about-titulos display-2 fw-bold">Arma tu</h1>
-        <h1 class="about-titulos display-2 fw-bold">barra.</h1>
-        <p class="lead text-secondary col-lg-10">
-          Crea tu cuenta para guardar equipo, seguir tus pedidos y recibir guias de calibracion.
-        </p>
-      </section>
+    <section class="IntroRegistro">
+      <small class="text-uppercase text-danger" style="font-size: 0.75rem;">CUENTA NUEVA</small>
+      <h1 class="about-titulos display-2 fw-bold">Arma tu</h1>
+      <h1 class="about-titulos display-2 fw-bold">barra.</h1>
+      <p class="lead text-secondary col-lg-10">
+        Crea tu cuenta para guardar equipo, seguir tus pedidos y recibir guias de calibracion.
+      </p>
+    </section>
 
-      <div class="imagen"><img src="../src/assets/img/productos/orbit.jpg" alt="Barra de cafe" width="730px" height="733px"></div>
-      
-    <form class="CamposUwU">
+    <div class="imagen">
+      <img src="../src/assets/img/productos/orbit.jpg" alt="Barra de cafe" width="730px" height="733px">
+    </div>
+    
+    <!-- para las alertas de Bootstrap -->
+    <div id="alertas" class="mb-3 px-3"></div>
+
+    <form class="CamposUwU" id="form-registro">
 
       <div class="registrar">
         <h6>NOMBRE COMPLETO *</h6>
-        <input type="text" placeholder="Nombre"  class="form-control rounded-0">
+        <input type="text" id="nombre" placeholder="Nombre" class="form-control rounded-0">
       </div>
       
       <div class="registrar">
-          <h6>CORREO *</h6>
-        <input type="email" placeholder="tucorreo@mail.com" class="form-control rounded-0">
+        <h6>CORREO *</h6>
+        <input type="email" id="correo" placeholder="tucorreo@mail.com" class="form-control rounded-0">
       </div>
 
-        <div class="registrar">
-          <h6>NUMERO *</h6>
-        <input type="number" placeholder="00-0000-0000" class="form-control rounded-0">
+      <div class="registrar">
+        <h6>NUMERO *</h6>
+        <input type="number" id="telefono" placeholder="0000000000" class="form-control rounded-0">
       </div>
         
       <div class="registrar">
-         <h6>CONTRASEÑA *</h6>
-        <input type="password" placeholder="Mínimo 6 caracteres" class="form-control rounded-0">
-      </div>
-
-       <div class="registrar">
-         <h6>CONFIRMAR CONTRASEÑA *</h6>
-        <input type="password" placeholder="Repite tu contraseña" class="form-control rounded-0">
-      </div>
-
-        <div class="registrar">
-         <h6>¿QUE TANTO SABES DE CAFE? (OPCIONAL)</h6>
-            <div  >
-            <button type="button" class="cafePro" aria-pressed="false" > PRINCIPIANTE </button>
-            <button type="button" class="cafePro" aria-pressed="false" > INTERMEDIO </button>
-            <button type="button" class="cafePro" aria-pressed="false" > AVANZADO </button>
-            </div>
-        </div>
-
-       <div class="registrar">
-        <input type="checkbox" > Acepto términos y aviso de privacidad.</input>
+        <h6>CONTRASEÑA *</h6>
+        <input type="password" id="contrasena" placeholder="Mínimo 6 caracteres" class="form-control rounded-0">
       </div>
 
       <div class="registrar">
-        <button type="submit" class="registraloB" >CREAR CUENTA</button>
+        <h6>CONFIRMAR CONTRASEÑA *</h6>
+        <input type="password" id="confirmarContrasena" placeholder="Repite tu contraseña" class="form-control rounded-0">
+      </div>
+
+      <div class="registrar">
+        <h6>¿QUE TANTO SABES DE CAFE? (OPCIONAL)</h6>
+        <div>
+          <button type="button" class="cafePro" aria-pressed="false"> PRINCIPIANTE </button>
+          <button type="button" class="cafePro" aria-pressed="false"> INTERMEDIO </button>
+          <button type="button" class="cafePro" aria-pressed="false"> AVANZADO </button>
+        </div>
+      </div>
+
+      <div class="registrar form-check">
+        <input type="checkbox" class="form-check-input" id="terminos">
+        <label class="form-check-label" for="terminos">Acepto términos y aviso de privacidad.</label>
+      </div>
+
+      <div class="registrar">
+        <button type="submit" class="registraloB">CREAR CUENTA</button>
       </div>
 
       <div>
-        <button class="cafePro" style="border: 0;"><a type="button" href="login.html"><h6 class="cafePro">¿YA TIENES UNA CUENTA? INICIA SESIÓN -></h6></a></button>
+        <a href="login.html" class="cafePro text-decoration-none d-inline-block mt-2">
+          <h6>¿YA TIENES UNA CUENTA? INICIA SESIÓN &rarr;</h6>
+        </a>
       </div>
     </form>
 
-
-
-<div id="footer"></div>
+    <!-- footer -->
+    <div id="footer"></div>
     <script defer src="../src/assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
     <script type="module" src="../src/main.js"></script>
-
+    <script type="module" src="../src/js/registro.js"></script>
   </body>
+</html>
