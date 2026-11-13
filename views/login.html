@@ -26,52 +26,67 @@
     <title>Login | CoffeeMod</title>
   </head>
 
-    <body data-pagina="inicio">
-    <div id="header"></div>
+ <body data-pagina="inicio">
+  <div id="header"></div>
 
-       <section class="IntroLogin">
-        <small class="text-uppercase text-danger " style="font-size: 0.75rem;">CUENTA</small>
-        <h1 class="about-titulos display-2 fw-bold">Bienvenido</h1>
-        <h1 class="about-titulos display-2 fw-bold">de vuelta.</h1>
-        <p class="lead text-secondary col-lg-12">
-          Entra para ver tus pedidos, tu garantía y tu equipo guardado.
-        </p>
-      </section>
+  <main class="container-fluid">
+    <div class="row align-items-center">
 
-      <div class="imagen"><img src="../src/assets/img/productos/bascula-negra.jpg" width="730" height="730"> </div>
-
-      <form class="Login">
-
-         <div class="logeo">
-          <h6>CORREO</h6>
-        <input type="email" placeholder="tucorreo@mail.com" class="form-control rounded-0">
-      </div>
-        
-      <div class="logeo">
-         <h6>CONTRASEÑA</h6>
-        <input type="password" placeholder="Mínimo 6 caracteres"  class="form-control rounded-0">
+      <!-- Imagen -->
+      <div class="col-12 col-lg-6 imagen p-4 p-lg-5 text-center">
+        <img src="../src/assets/img/productos/bascula-negra.webp"
+             class="img-fluid" alt="Báscula negra" width="730" height="730">
       </div>
 
-       <div class="logeo">
-        <input type="checkbox" > Recordarme</input>
+      <!-- Texto + formulario -->
+      <div class="col-12 col-lg-6 px-4 px-lg-5 py-4 py-lg-5">
 
-        <button class="TeDioAmnesia" style="border: 0;"><a type="button" href="#"><h6 class="TeDioAmnesia">¿Olvidaste tu contraseña?</h6></a></button>
+        <section class="IntroLogin mb-4 mb-lg-5">
+          <small class="text-uppercase text-danger" style="font-size: 0.75rem;">CUENTA</small>
+          <h1 class="about-titulos display-2 fw-bold">Bienvenido</h1>
+          <h1 class="about-titulos display-2 fw-bold">de vuelta.</h1>
+          <p class="lead text-secondary">
+            Entra para ver tus pedidos, tu garantía y tu equipo guardado.
+          </p>
+        </section>
+
+        <form class="Login">
+
+          <div class="logeo">
+            <h6>CORREO</h6>
+            <input type="email" placeholder="tucorreo@mail.com" class="form-control rounded-0">
+          </div>
+
+          <div class="logeo">
+            <h6>CONTRASEÑA</h6>
+            <input type="password" placeholder="Mínimo 6 caracteres" class="form-control rounded-0">
+          </div>
+
+          <div class="logeo d-flex flex-wrap justify-content-between align-items-center gap-2">
+            <label><input type="checkbox"> Recordarme</label>
+            <button type="button" class="TeDioAmnesia" style="border: 0;">
+              <a href="#"><h6 class="TeDioAmnesia m-0">¿Olvidaste tu contraseña?</h6></a>
+            </button>
+          </div>
+
+          <div class="logeo">
+            <button type="submit" class="logealoB w-100">INICIAR SESIÓN</button>
+          </div>
+
+          <div class="logeo">
+            <button type="button" class="linkNegro" style="border: 0;">
+              <a href="registro.html"><h6 class="linkNegro m-0">¿NO TIENES UNA CUENTA? REGISTRATE -></h6></a>
+            </button>
+          </div>
+
+        </form>
       </div>
 
-       <div class="logeo">
-        <button type="submit" class="logealoB" >INICIAR SESIÓN</button>
-      </div>
+    </div>
+  </main>
 
-     
-      <div class="logeo">
-        <button class="linkNegro" style="border: 0;"><a type="button" href="registro.html"><h6 class="linkNegro">¿NO TIENES UNA CUENTA? REGISTRATE -></h6></a></button>
-      </div>
-
-      </form>
-
-
-    <div id="footer"></div>
-    <script defer src="../src/assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
-    <script type="module" src="../src/main.js"></script>
-  </body>
+  <div id="footer"></div>
+  <script defer src="../src/assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+  <script type="module" src="../src/main.js"></script>
+</body>
 </html>
