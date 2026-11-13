@@ -11,6 +11,7 @@ const links = [
   { id: 'descubre', texto: 'DESCUBRE', href: '#' },
   { id: 'nosotros', texto: 'NOSOTROS', href: base + 'views/about-us.html' },
   { id: 'contacto', texto: 'CONTACTO', href: base + 'views/contacto.html' }
+  
 ];
 
 // menu de CUENTA (por ahora solo el formulario de admin)
@@ -23,6 +24,7 @@ const cuenta = `
     <li><a class="dropdown-item" href="${base}views/producto-form.html">Pedidos</a></li>
     <li><a class="dropdown-item" href="${base}views/producto-form.html">Clientes</a></li>
     <li><a class="dropdown-item" href="${base}views/producto-form.html">Inventario</a></li>
+    
   </ul>`;
 
 // suma los productos del carrito guardado en localStorage
@@ -56,6 +58,7 @@ export function crearNavbar(paginaActiva) {
 
         <ul class="navbar-nav flex-row align-items-center gap-3 gap-lg-4 ms-auto order-lg-3 flex-lg-fill justify-content-lg-end">
           <li class="nav-item d-none d-lg-block"><a class="nav-link" href="#">BUSCAR</a></li>
+          <li class="nav-item"><a class="nav-link" href="${base}views/login.html">INICIAR SESION</a><li>
           <li class="nav-item dropdown d-none d-lg-block">${cuenta}</li>
           <li class="nav-item"><a class="nav-link" href="#">CARRITO ${contador}</a></li>
           
