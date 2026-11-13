@@ -1,0 +1,65 @@
+.IntroLogin{
+        position:absolute;
+    padding: 120px 0px 0px 870px;
+}
+
+.imagen{
+    position: absolute;
+    padding: 50px;
+}
+
+.Login{
+    position: relative;
+    align-items: baseline;
+    padding: 400px 200px 125px 870px;
+}
+
+.logeo{
+    position: relative;
+    align-items:baseline;
+    padding: 10px 0px;
+    
+}
+
+.logealoB{
+ background-color: var(--oxido);
+ color:aliceblue;
+ border:0;
+ padding: 10px 357px;
+}
+
+.linkNegro{
+    align-items: flex;
+     background-color: var(--bg-principal);
+     color: var(--texto-principal);
+     transition: 0.1s;
+}
+.linkNegro:hover{
+    color:brown;
+}
+
+a{
+    color:aliceblue;
+    text-decoration: none;
+}
+
+.TeDioAmnesia{
+   padding-left: 111px;
+    align-items: flex-end;
+    color: var(--oxido);
+     background-color: var(--bg-principal);
+     border-color: var(--borde-color);
+}
+
+.form-control{
+     background-color: var(--bg-principal);
+  color: var(--texto-principal);
+  border-color: gray;
+  font-family: "JetBrains Mono", monospace;
+}
+.form-control:focus{
+      box-shadow: none;
+  background-color: var(--bg-principal);
+  color: var(--texto-principal);
+  border-color: var(--oxido);
+}
