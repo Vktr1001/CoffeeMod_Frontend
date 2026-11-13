@@ -14,4 +14,11 @@ body {
   background-color: var(--bg-principal);
   color: var(--texto-principal);
   transition: background-color 0.3s ease, color 0.3s ease;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main{
+  flex-grow: 1;
 }

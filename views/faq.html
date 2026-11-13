@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="../src/assets/img/Grano.svg" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      try {
+        document.documentElement.dataset.theme = localStorage.getItem('coffeemod-theme') || 'dark';
+      } catch {
+        document.documentElement.dataset.theme = 'dark';
+      }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=JetBrains+Mono&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../src/assets/vendor/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="../src/assets/vendor/bootstrap-icons/bootstrap-icons.min.css" />
+    <link rel="stylesheet" href="../src/css/global/variables.css" />
+    <link rel="stylesheet" href="../src/css/global/global.css" />
+    <link rel="stylesheet" href="../src/css/components/navbar.css" />
+    <link rel="stylesheet" href="../src/css/components/footer.css" />
+    <link rel="stylesheet" href="../src/css/components/logo.css" />
+    <link rel="stylesheet" href="../src/css/pages/faq.css" />
+
+    <title>Preguntas Frecuentes | CoffeeMod</title>
+  </head>
+  <body data-pagina="faq">
+    <div id="header"></div>
+
+    <main class="about-pagina">
+
+      <!-- Intro de la página FAQ -->
+      <section class="container-fluid px-4 px-lg-5 py-5">
+        <nav class="about-mono" aria-label="Ruta de navegación">
+          <a href="../index.html">INICIO</a><span aria-hidden="true"> / </span><span aria-current="page">AYUDA</span>
+        </nav>
+        <h1 class="about-titulos display-1 fw-bold">Preguntas Frecuentes.</h1>
+        <p class="lead text-secondary col-lg-7">
+          Todo lo que necesitas saber sobre envíos, garantías y nuestros equipos de café.
+        </p>
+      </section>
+
+      <!-- Listado de Preguntas Frecuentes -->
+      <section class="container-fluid px-4 px-lg-5 py-5 border-top border-secondary border-opacity-25">
+        <p class="about-mono about-rol text-danger mb-4">04 // PREGUNTAS FRECUENTES</p>
+
+        <div class="col-lg-9 faq-lista">
+
+          <!-- Pregunta 1 -->
+          <details class="faq-fila border-bottom border-secondary border-opacity-25">
+            <summary class="faq-pregunta py-4 d-flex justify-content-between align-items-center">
+              <span>¿Cuál es el tiempo estimado de entrega y cómo funciona el envío gratis?</span>
+              <i class="bi bi-plus-lg faq-icono ms-3"></i>
+            </summary>
+            <div class="faq-respuesta pb-4 text-secondary">
+              Los envíos estándar toman de <strong>3 a 5 días hábiles</strong> a cualquier parte de la República Mexicana a través de paqueterías aseguradas. En compras de equipo a partir de <strong>$1,508 MXN</strong> el envío es completamente gratis. Una vez que tu paquete salga, recibirás un correo electrónico con tu número de guía.
+            </div>
+          </details>
+
+          <!-- Pregunta 2 -->
+          <details class="faq-fila border-bottom border-secondary border-opacity-25">
+            <summary class="faq-pregunta py-4 d-flex justify-content-between align-items-center">
+              <span>¿Qué cubre exactamente la garantía de 2 años en los equipos?</span>
+              <i class="bi bi-plus-lg faq-icono ms-3"></i>
+            </summary>
+            <div class="faq-respuesta pb-4 text-secondary">
+              Todos nuestros equipos cuentan con <strong>2 años de garantía directa</strong> contra cualquier defecto de fabricación en componentes internos, calderas, bombas de presión y paneles electrónicos. <em>No cubre daños por caídas, mal uso o falta de descalcificación.</em>
+            </div>
+          </details>
+
+          <!-- Pregunta 3 -->
+          <details class="faq-fila border-bottom border-secondary border-opacity-25">
+            <summary class="faq-pregunta py-4 d-flex justify-content-between align-items-center">
+              <span>¿Qué equipo me recomiendan si voy empezando en el café de especialidad?</span>
+              <i class="bi bi-plus-lg faq-icono ms-3"></i>
+            </summary>
+            <div class="faq-respuesta pb-4 text-secondary">
+              Si vas dando el salto de café tradicional hacia métodos artesanales, te recomendamos iniciar con un <strong>kit V60 o Chemex</strong>, una báscula con temporizador y un molino de muelas cónicas. Esto te permite controlar molienda y temperatura perfectamente.
+            </div>
+          </details>
+
+          <!-- Pregunta 4 -->
+          <details class="faq-fila border-bottom border-secondary border-opacity-25">
+            <summary class="faq-pregunta py-4 d-flex justify-content-between align-items-center">
+              <span>¿Cómo puedo solicitar la factura fiscal de mi compra?</span>
+              <i class="bi bi-plus-lg faq-icono ms-3"></i>
+            </summary>
+            <div class="faq-respuesta pb-4 text-secondary">
+              Puedes solicitar tu factura dentro de los primeros <strong>5 días hábiles</strong> posteriores a tu compra enviándonos tu número de pedido, Constancia de Situación Fiscal actualizada y uso de CFDI a través de nuestra sección de contacto.
+            </div>
+          </details>
+
+          <!-- NUEVA PREGUNTA 5 -->
+          <details class="faq-fila border-bottom border-secondary border-opacity-25">
+            <summary class="faq-pregunta py-4 d-flex justify-content-between align-items-center">
+              <span>¿Ofrecen precios especiales o mayoreo para cafeteras y cafeterías?</span>
+              <i class="bi bi-plus-lg faq-icono ms-3"></i>
+            </summary>
+            <div class="faq-respuesta pb-4 text-secondary">
+              ¡Sí! Contamos con planes especiales para proyectos comerciales, barras de especialidad y compras de volumen institucional. Escríbenos directamente desde el formulario de contacto indicando las piezas que requieres para asignarte un asesor personalizado.
+            </div>
+          </details>
+
+          <!-- NUEVA PREGUNTA 6 -->
+          <details class="faq-fila border-bottom border-secondary border-opacity-25">
+            <summary class="faq-pregunta py-4 d-flex justify-content-between align-items-center">
+              <span>¿Qué tipo de mantenimiento preventivo necesita mi máquina de espresso?</span>
+              <i class="bi bi-plus-lg faq-icono ms-3"></i>
+            </summary>
+            <div class="faq-respuesta pb-4 text-secondary">
+              Recomendamos realizar un retro-lavado (backflush) con detergente especial cada semana si el uso es doméstico diario, purgar el grupo de vapor después de cada uso y realizar un ciclo de descalcificación cada 2 o 3 meses dependiendo de la dureza del agua en tu zona.
+            </div>
+          </details>
+
+        </div>
+      </section>
+
+    </main>
+
+    <div id="footer"></div>
+
+    <script defer src="../src/assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+    <script type="module" src="../src/main.js"></script>
+  </body>
+</html>
