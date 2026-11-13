@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="../src/assets/img/Grano.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      try {
+        document.documentElement.dataset.theme = localStorage.getItem('coffeemod-theme') || 'dark';
+      } catch {
+        document.documentElement.dataset.theme = 'dark';
+      }
+      </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=JetBrains+Mono&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../src/assets/vendor/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="../src/assets/vendor/bootstrap-icons/bootstrap-icons.min.css" />
+    <link rel="stylesheet" href="../src/css/global/variables.css" />
+    <link rel="stylesheet" href="../src/css/global/global.css" />
+    <link rel="stylesheet" href="../src/css/components/navbar.css" />
+    <link rel="stylesheet" href="../src/css/components/footer.css" />
+    <link rel="stylesheet" href="../src/css/components/logo.css" />
+    <link rel="stylesheet" href="../src/css/pages/login.css" />
+ 
+    <title>Login | CoffeeMod</title>
+  </head>
+
+    <body data-pagina="inicio">
+    <div id="header"></div>
+
+       <section class="IntroLogin">
+        <small class="text-uppercase text-danger " style="font-size: 0.75rem;">CUENTA</small>
+        <h1 class="about-titulos display-2 fw-bold">Bienvenido</h1>
+        <h1 class="about-titulos display-2 fw-bold">de vuelta.</h1>
+        <p class="lead text-secondary col-lg-12">
+          Entra para ver tus pedidos, tu garantía y tu equipo guardado.
+        </p>
+      </section>
+
+      <div class="imagen"><img src="../src/assets/img/productos/bascula-negra.jpg" width="730" height="730"> </div>
+
+      <form class="Login">
+
+         <div class="logeo">
+          <h6>CORREO</h6>
+        <input type="email" placeholder="tucorreo@mail.com" class="form-control rounded-0">
+      </div>
+        
+      <div class="logeo">
+         <h6>CONTRASEÑA</h6>
+        <input type="password" placeholder="Mínimo 6 caracteres"  class="form-control rounded-0">
+      </div>
+
+       <div class="logeo">
+        <input type="checkbox" > Recordarme</input>
+
+        <button class="TeDioAmnesia" style="border: 0;"><a type="button" href="#"><h6 class="TeDioAmnesia">¿Olvidaste tu contraseña?</h6></a></button>
+      </div>
+
+       <div class="logeo">
+        <button type="submit" class="logealoB" >INICIAR SESIÓN</button>
+      </div>
+
+     
+      <div class="logeo">
+        <button class="linkNegro" style="border: 0;"><a type="button" href="registro.html"><h6 class="linkNegro">¿NO TIENES UNA CUENTA? REGISTRATE -></h6></a></button>
+      </div>
+
+      </form>
+
+
+    <div id="footer"></div>
+    <script defer src="../src/assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+    <script type="module" src="../src/main.js"></script>
+  </body>
+</html>
