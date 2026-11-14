@@ -83,7 +83,7 @@
     padding: 10px 12px;
 }
 
-/* Placeholder optimizado: más pequeño, fuente original (Inter) y más clarito */
+/* Placeholder optimizado*/
 .form-control::placeholder {
     color: #8a8a8a !important;
     opacity: 0.45 !important;
@@ -120,7 +120,6 @@
     color: var(--bg-principal);
 }
 
-/* antes: a { color: aliceblue } afectaba TODOS los links (en modo claro quedaban invisibles) */
 .enlace-acento {
     color: var(--oxido);
     text-decoration: none;
