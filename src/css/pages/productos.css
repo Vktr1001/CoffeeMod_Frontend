@@ -2,10 +2,10 @@
   --tienda-superficie: #18181b;
   --tienda-diagonal: #3f3f46;
   --tienda-precio: #f0795c;
+  width: 100%;
   max-width: 1600px;
   margin-inline: auto;
   padding: 48px clamp(20px, 2.5vw, 48px) 80px;
-  font-family: "Inter", sans-serif;
   color: var(--texto-principal);
 }
 
@@ -27,7 +27,7 @@
   font-family: "JetBrains Mono", monospace;
 }
 
-.tienda-migas { margin-bottom: 18px; font-size: 10px; letter-spacing: .08em; color: var(--texto-secundario); }
+.tienda-migas { margin-bottom: 18px; font-size: 13px; letter-spacing: .08em; color: var(--texto-secundario); }
 .tienda-migas a { color: inherit; text-decoration: none; }
 .tienda-migas a:hover { text-decoration: underline; }
 .tienda-intro h1 { font-family: "Space Grotesk", sans-serif; font-size: clamp(36px, 4vw, 56px); font-weight: 700; line-height: 1; letter-spacing: -.055em; margin: 0 0 20px; }

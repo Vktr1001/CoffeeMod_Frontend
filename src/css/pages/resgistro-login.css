@@ -1,0 +1,136 @@
+/* Recordatorio personal: padding: arriba derecha abajo izquierda */
+.IntroRegistro {  
+    padding: 0;
+}
+
+.CamposUwU {
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.imagen {
+    position: relative;
+    padding: 0;
+    margin-left: 0; 
+}
+
+/* Espaciado vertical equilibrado entre cada campo */
+.registrar {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 8px 0; 
+}
+
+.registrar h6 {
+    margin-bottom: 2px;
+    font-size: 0.8rem;
+    letter-spacing: 0.5px;
+}
+
+/* Alineación estricta en un solo renglón a la izquierda para el checkbox */
+.registrar-check {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    gap: 10px !important;
+    padding: 14px 0 8px 0 !important;
+    text-align: left !important;
+}
+
+/* login: "Recordarme" a la izquierda y "Olvidaste..." a la derecha */
+.registrar-check--entre {
+    justify-content: space-between !important;
+}
+
+.registrar-check input[type="checkbox"] {
+    margin: 0 !important;
+    position: static !important;
+    float: none !important;
+    cursor: pointer;
+}
+
+.registrar-check label {
+    margin: 0 !important;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.registraloB { /* El gran botón rojo que crea la cuenta */
+    background-color: var(--oxido);
+    color: aliceblue;
+    border: 0;
+    width: 100%;
+    padding: 13px 0;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.campoRegistro { 
+    background-color: var(--bg-principal);
+    color: var(--texto-principal);
+    border-color: var(--borde-color);
+}
+
+.form-control {
+    background-color: var(--bg-principal);
+    color: var(--texto-principal);
+    border-color: gray;
+    font-family: "JetBrains Mono", monospace;
+    padding: 10px 12px;
+}
+
+/* Placeholder optimizado: más pequeño, fuente original (Inter) y más clarito */
+.form-control::placeholder {
+    color: #8a8a8a !important;
+    opacity: 0.45 !important;
+    font-size: 0.85rem !important;
+    font-family: "Inter", sans-serif !important;
+}
+
+.form-control:focus {
+    box-shadow: none;
+    background-color: var(--bg-principal);
+    color: var(--texto-principal);
+    border-color: var(--oxido);
+}
+
+.cafePro {
+    display: inline-flex;
+    align-items: center;
+    padding: 7px 14px;
+    border-radius: 20px;
+    background-color: var(--bg-principal);
+    color: var(--texto-principal);
+    border: 1px solid var(--borde-color);
+    font-size: 0.85rem;
+}
+
+.cafePro:hover {
+    color: black;
+    background-color: white;
+}
+
+/* Estado presionado de los botones de café */
+.cafePro[aria-pressed="true"] {
+    background: var(--texto-principal); 
+    color: var(--bg-principal);
+}
+
+/* antes: a { color: aliceblue } afectaba TODOS los links (en modo claro quedaban invisibles) */
+.enlace-acento {
+    color: var(--oxido);
+    text-decoration: none;
+    font-size: 0.85rem;
+}
+.enlace-acento:hover { text-decoration: underline; }
+
+/* Ajuste fino para pantallas chicas */
+@media (max-width: 575.98px) {
+    .IntroRegistro .display-2 {
+        font-size: 2.75rem;
+    }
+}

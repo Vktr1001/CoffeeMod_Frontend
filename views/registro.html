@@ -21,80 +21,96 @@
     <link rel="stylesheet" href="../src/css/components/navbar.css" />
     <link rel="stylesheet" href="../src/css/components/footer.css" />
     <link rel="stylesheet" href="../src/css/components/logo.css" />
-    <link rel="stylesheet" href="../src/css/pages/registro.css" />
+    <link rel="stylesheet" href="../src/css/pages/resgistro-login.css" />
  
     <title>Registro | CoffeeMod</title>
   </head>
-  <body>
+  
+  <body data-pagina="registro">
     <div id="header"></div>
 
-    <section class="IntroRegistro">
-      <small class="text-uppercase text-danger" style="font-size: 0.75rem;">CUENTA NUEVA</small>
-      <h1 class="about-titulos display-2 fw-bold">Arma tu</h1>
-      <h1 class="about-titulos display-2 fw-bold">barra.</h1>
-      <p class="lead text-secondary col-lg-10">
-        Crea tu cuenta para guardar equipo, seguir tus pedidos y recibir guias de calibracion.
-      </p>
-    </section>
-
-    <div class="imagen">
-      <img src="../src/assets/img/productos/orbit.jpg" alt="Barra de cafe" width="730px" height="733px">
-    </div>
-    
-    <!-- para las alertas de Bootstrap -->
-    <div id="alertas" class="mb-3 px-3"></div>
-
-    <form class="CamposUwU" id="form-registro">
-
-      <div class="registrar">
-        <h6>NOMBRE COMPLETO *</h6>
-        <input type="text" id="nombre" placeholder="Nombre" class="form-control rounded-0">
-      </div>
-      
-      <div class="registrar">
-        <h6>CORREO *</h6>
-        <input type="email" id="correo" placeholder="tucorreo@mail.com" class="form-control rounded-0">
-      </div>
-
-      <div class="registrar">
-        <h6>NUMERO *</h6>
-        <input type="number" id="telefono" placeholder="0000000000" class="form-control rounded-0">
-      </div>
+    <!-- Contenedor principal en dos columnas -->
+    <main class="container my-5 py-lg-3">
+      <div class="row align-items-center g-4 g-lg-5">
         
-      <div class="registrar">
-        <h6>CONTRASEÑA *</h6>
-        <input type="password" id="contrasena" placeholder="Mínimo 6 caracteres" class="form-control rounded-0">
-      </div>
-
-      <div class="registrar">
-        <h6>CONFIRMAR CONTRASEÑA *</h6>
-        <input type="password" id="confirmarContrasena" placeholder="Repite tu contraseña" class="form-control rounded-0">
-      </div>
-
-      <div class="registrar">
-        <h6>¿QUE TANTO SABES DE CAFE? (OPCIONAL)</h6>
-        <div>
-          <button type="button" class="cafePro" aria-pressed="false"> PRINCIPIANTE </button>
-          <button type="button" class="cafePro" aria-pressed="false"> INTERMEDIO </button>
-          <button type="button" class="cafePro" aria-pressed="false"> AVANZADO </button>
+        <!-- COLUMNA IZQUIERDA: Imagen -->
+        <div class="col-lg-6">
+          <div class="imagen">
+            <img src="../src/assets/img/productos/orbit.jpg" alt="Barra de cafe" class="img-fluid w-100 object-fit-cover">
+          </div>
         </div>
-      </div>
 
-      <div class="registrar form-check">
-        <input type="checkbox" class="form-check-input" id="terminos">
-        <label class="form-check-label" for="terminos">Acepto términos y aviso de privacidad.</label>
-      </div>
+        <!-- COLUMNA DERECHA:tiulos y Formulario -->
+        <div class="col-lg-6">
+          
+          <!-- Título y descripción -->
+          <section class="IntroRegistro mb-4">
+            <small class="text-uppercase text-danger d-block mb-2" style="font-size: 0.75rem; letter-spacing: 1px;">CUENTA NUEVA</small>
+            <h1 class="about-titulos display-2 fw-bold lh-1 mb-3">Arma tu<br>barra.</h1>
+            <p class="lead text-secondary mb-0">
+              Crea tu cuenta para guardar equipo, seguir tus pedidos y recibir guias de calibracion.
+            </p>
+          </section>
 
-      <div class="registrar">
-        <button type="submit" class="registraloB">CREAR CUENTA</button>
-      </div>
+          <!-- Alertas de Bootstrap -->
+          <div id="alertas" class="mb-3"></div>
 
-      <div>
-        <a href="login.html" class="cafePro text-decoration-none d-inline-block mt-2">
-          <h6>¿YA TIENES UNA CUENTA? INICIA SESIÓN &rarr;</h6>
-        </a>
+          <form class="CamposUwU" id="form-registro" novalidate>
+
+            <div class="registrar">
+              <h6>NOMBRE COMPLETO *</h6>
+              <input type="text" id="nombre" placeholder="Nombre" class="form-control rounded-0">
+            </div>
+            
+            <div class="registrar">
+              <h6>CORREO ELECTRÓNICO*</h6>
+              <input type="email" id="correo" placeholder="tucorreo@mail.com" class="form-control rounded-0">
+            </div>
+
+            <div class="registrar">
+              <h6>NUMERO TELEFÓNICO *</h6>
+              <input type="tel" id="telefono" placeholder="0000000000" class="form-control rounded-0">
+            </div>
+              
+            <div class="registrar">
+              <h6>CONTRASEÑA *</h6>
+              <input type="password" id="contrasena" placeholder="Mínimo 6 caracteres" class="form-control rounded-0">
+            </div>
+
+            <div class="registrar">
+              <h6>CONFIRMAR CONTRASEÑA *</h6>
+              <input type="password" id="confirmarContrasena" placeholder="Repite tu contraseña" class="form-control rounded-0">
+            </div>
+
+            <div class="registrar">
+              <h6>¿QUE TANTO SABES DE CAFE? (OPCIONAL)</h6>
+              <div class="d-flex flex-wrap gap-2">
+                <button type="button" class="cafePro" aria-pressed="false"> PRINCIPIANTE </button>
+                <button type="button" class="cafePro" aria-pressed="false"> INTERMEDIO </button>
+                <button type="button" class="cafePro" aria-pressed="false"> AVANZADO </button>
+              </div>
+            </div>
+
+            <!-- Checkbox y texto alineados perfectamente en el mismo renglón -->
+            <div class="registrar-check">
+              <input type="checkbox" class="form-check-input" id="terminos">
+              <label class="form-check-label" for="terminos">Acepto términos y aviso de privacidad.</label>
+            </div>
+
+            <div class="registrar pt-2">
+              <button type="submit" class="registraloB">CREAR CUENTA</button>
+            </div>
+
+            <div class="mt-3">
+              <a href="login.html" class="cafePro text-decoration-none d-inline-block">
+                <h6 class="mb-0" style="font-size: 0.85rem;">¿YA TIENES UNA CUENTA? INICIA SESIÓN &rarr;</h6>
+              </a>
+            </div>
+          </form>
+        </div>
+
       </div>
-    </form>
+    </main>
 
     <!-- footer -->
     <div id="footer"></div>

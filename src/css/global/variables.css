@@ -17,6 +17,8 @@
   --borde-color: #27272a;
 
   --superficie: #18181b;
+  --fuente-titulo: "Space Grotesk", sans-serif;
+  --fuente-texto: "Inter", sans-serif;
   --fuente-mono: "JetBrains Mono", ui-monospace, monospace;
   --espacio-seccion: clamp(3rem, 8vw, 6rem);
 

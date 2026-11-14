@@ -10,7 +10,7 @@
       } catch {
         document.documentElement.dataset.theme = 'dark';
       }
-      </script>
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=JetBrains+Mono&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
@@ -21,72 +21,76 @@
     <link rel="stylesheet" href="../src/css/components/navbar.css" />
     <link rel="stylesheet" href="../src/css/components/footer.css" />
     <link rel="stylesheet" href="../src/css/components/logo.css" />
-    <link rel="stylesheet" href="../src/css/pages/login.css" />
+    <link rel="stylesheet" href="../src/css/pages/resgistro-login.css" />
  
     <title>Login | CoffeeMod</title>
   </head>
 
- <body data-pagina="inicio">
-  <div id="header"></div>
+ <body data-pagina="login">
+    <div id="header"></div>
 
-  <main class="container-fluid">
-    <div class="row align-items-center">
+    <!-- Mismo contenedor que registro.html -->
+    <main class="container my-5 py-lg-3">
+      <div class="row align-items-center g-4 g-lg-5">
 
-      <!-- Imagen -->
-      <div class="col-12 col-lg-6 imagen p-4 p-lg-5 text-center">
-        <img src="../src/assets/img/productos/bascula-negra.webp"
-             class="img-fluid" alt="Báscula negra" width="730" height="730">
+        <!-- COLUMNA IZQUIERDA: Imagen -->
+        <div class="col-lg-6">
+          <div class="imagen">
+            <img src="../src/assets/img/productos/bascula-negra.webp" alt="Báscula negra" class="img-fluid w-100 object-fit-cover">
+          </div>
+        </div>
+
+        <!-- COLUMNA DERECHA: títulos y formulario -->
+        <div class="col-lg-6">
+
+          <section class="IntroRegistro mb-4">
+            <small class="text-uppercase text-danger d-block mb-2" style="font-size: 0.75rem; letter-spacing: 1px;">CUENTA</small>
+            <h1 class="about-titulos display-2 fw-bold lh-1 mb-3">Bienvenido<br>de vuelta.</h1>
+            <p class="lead text-secondary mb-0">
+              Entra para ver tus pedidos, tu garantía y tu equipo guardado.
+            </p>
+          </section>
+
+          <div id="alertas" class="mb-3"></div>
+
+          <form class="CamposUwU" id="form-login" novalidate>
+
+            <div class="registrar">
+              <h6>CORREO ELECTRÓNICO *</h6>
+              <input type="email" id="correo" placeholder="tucorreo@mail.com" class="form-control rounded-0">
+            </div>
+
+            <div class="registrar">
+              <h6>CONTRASEÑA *</h6>
+              <input type="password" id="contrasena" placeholder="Mínimo 6 caracteres" class="form-control rounded-0">
+            </div>
+
+            <div class="registrar-check registrar-check--entre">
+              <span class="d-flex align-items-center gap-2">
+                <input type="checkbox" class="form-check-input" id="recordarme">
+                <label class="form-check-label" for="recordarme">Recordarme</label>
+              </span>
+              <a href="#" class="enlace-acento">¿Olvidaste tu contraseña?</a>
+            </div>
+
+            <div class="registrar pt-2">
+              <button type="submit" class="registraloB">INICIAR SESIÓN</button>
+            </div>
+
+            <div class="mt-3">
+              <a href="registro.html" class="cafePro text-decoration-none d-inline-block">
+                <h6 class="mb-0" style="font-size: 0.85rem;">¿NO TIENES UNA CUENTA? REGÍSTRATE &rarr;</h6>
+              </a>
+            </div>
+          </form>
+        </div>
+
       </div>
+    </main>
 
-      <!-- Texto + formulario -->
-      <div class="col-12 col-lg-6 px-4 px-lg-5 py-4 py-lg-5">
-
-        <section class="IntroLogin mb-4 mb-lg-5">
-          <small class="text-uppercase text-danger" style="font-size: 0.75rem;">CUENTA</small>
-          <h1 class="about-titulos display-2 fw-bold">Bienvenido</h1>
-          <h1 class="about-titulos display-2 fw-bold">de vuelta.</h1>
-          <p class="lead text-secondary">
-            Entra para ver tus pedidos, tu garantía y tu equipo guardado.
-          </p>
-        </section>
-
-        <form class="Login">
-
-          <div class="logeo">
-            <h6>CORREO</h6>
-            <input type="email" placeholder="tucorreo@mail.com" class="form-control rounded-0">
-          </div>
-
-          <div class="logeo">
-            <h6>CONTRASEÑA</h6>
-            <input type="password" placeholder="Mínimo 6 caracteres" class="form-control rounded-0">
-          </div>
-
-          <div class="logeo d-flex flex-wrap justify-content-between align-items-center gap-2">
-            <label><input type="checkbox"> Recordarme</label>
-            <button type="button" class="TeDioAmnesia" style="border: 0;">
-              <a href="#"><h6 class="TeDioAmnesia m-0">¿Olvidaste tu contraseña?</h6></a>
-            </button>
-          </div>
-
-          <div class="logeo">
-            <button type="submit" class="logealoB w-100">INICIAR SESIÓN</button>
-          </div>
-
-          <div class="logeo">
-            <button type="button" class="linkNegro" style="border: 0;">
-              <a href="registro.html"><h6 class="linkNegro m-0">¿NO TIENES UNA CUENTA? REGISTRATE -></h6></a>
-            </button>
-          </div>
-
-        </form>
-      </div>
-
-    </div>
-  </main>
-
-  <div id="footer"></div>
-  <script defer src="../src/assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
-  <script type="module" src="../src/main.js"></script>
-</body>
+    <div id="footer"></div>
+    <script defer src="../src/assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+    <script type="module" src="../src/main.js"></script>
+    <script type="module" src="../src/js/login.js"></script>
+  </body>
 </html>

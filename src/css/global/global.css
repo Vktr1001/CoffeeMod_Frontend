@@ -11,6 +11,7 @@
 
 body {
   margin: 0;
+  font-family: var(--fuente-texto);
   background-color: var(--bg-principal);
   color: var(--texto-principal);
   transition: background-color 0.3s ease, color 0.3s ease;
@@ -18,7 +19,23 @@ body {
   display: flex;
   flex-direction: column;
 }
+h1, h2, h3, h4, .about-titulos {
+  font-family: var(--fuente-titulo);
+  letter-spacing: -0.03em;
+}
 
 main{
   flex-grow: 1;
+}
+
+/* evitar el salto de pagina */
+#header { min-height: 131px; }   /* escritorio */
+#footer { min-height: 366px; }
+
+@media (max-width: 991.98px) {
+  #header { min-height: 131px; }
+}
+@media (max-width: 575.98px) {
+  #header { min-height: 186px; }
+  #footer { min-height: 801px; }
 }
