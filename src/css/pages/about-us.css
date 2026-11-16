@@ -2,7 +2,6 @@
 .about-pagina {
   background: var(--bg-principal);
   color: var(--texto-principal);
-  font-family: "Inter", sans-serif;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -17,8 +16,11 @@
   color: var(--texto-secundario);
   font-family: "JetBrains Mono", monospace;
   font-size: 13px;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.08em;
+  margin-bottom: 18px;
 }
+.about-mono a { color: inherit; text-decoration: none; }
+.about-mono a:hover { text-decoration: underline; }
 
 .about-rol {
   color: var(--oxido);

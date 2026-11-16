@@ -1,0 +1,78 @@
+/* 
+   ESTILOS DE LA PÁGINA POLÍTICAS (politicas.css)
+========================================= */
+
+/* Contenedor principal dinámico según data-theme */
+.about-pagina {
+  background: var(--bg-principal);
+  color: var(--texto-principal);
+  font-family: "Inter", sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.about-titulos {
+  font-family: "Space Grotesk", sans-serif;
+  letter-spacing: -0.03em;
+  color: var(--texto-principal);
+}
+
+.about-mono {
+  color: var(--texto-secundario);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  margin-bottom: 18px;
+}
+.about-mono a { color: inherit; text-decoration: none; }
+.about-mono a:hover { text-decoration: underline; }
+
+.about-rol,
+.texto-oxido {
+  color: var(--oxido) !important;
+}
+
+/* Botones de pestañas adaptados al modo claro/oscuro */
+#policyTabs .btn {
+  background: transparent;
+  color: var(--texto-principal);
+  border: 1px solid var(--borde-color);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  transition: all 0.25s ease;
+}
+
+#policyTabs .btn:hover {
+  color: var(--oxido);
+  border-color: var(--oxido);
+}
+
+/* Botón activo (seleccionado) */
+#policyTabs .btn.active {
+  background-color: var(--oxido) !important;
+  border-color: var(--oxido) !important;
+  color: #ffffff !important;
+}
+
+/* Contenido de cada pestaña */
+.tab-pane h3 {
+  font-family: "Space Grotesk", sans-serif;
+  color: var(--oxido);
+  letter-spacing: -0.02em;
+}
+
+.tab-pane p,
+.tab-pane li {
+  font-family: "Inter", sans-serif;
+  color: var(--texto-secundario);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.tab-pane strong {
+  color: var(--texto-principal);
+}
+
+.tab-pane i {
+  color: var(--oxido);
+}

@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="../src/assets/img/Grano.svg" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      try {
+        document.documentElement.dataset.theme = localStorage.getItem('coffeemod-theme') || 'dark';
+      } catch {
+        document.documentElement.dataset.theme = 'dark';
+      }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=JetBrains+Mono&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../src/assets/vendor/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="../src/assets/vendor/bootstrap-icons/bootstrap-icons.min.css" />
+    <link rel="stylesheet" href="../src/css/global/variables.css" />
+    <link rel="stylesheet" href="../src/css/global/global.css" />
+    <link rel="stylesheet" href="../src/css/components/navbar.css" />
+    <link rel="stylesheet" href="../src/css/components/footer.css" />
+    <link rel="stylesheet" href="../src/css/components/logo.css" />
+    <link rel="stylesheet" href="../src/css/pages/politicas.css" />
+
+    <title>Políticas y Envíos | CoffeeMod</title>
+  </head>
+  <body data-pagina="politicas">
+    <div id="header"></div>
+
+    <main class="about-pagina">
+
+      <!-- Intro -->
+      <section class="container-fluid px-4 px-lg-5 py-5">
+        <nav class="about-mono" aria-label="Ruta de navegación">
+          <a href="../index.html">INICIO</a><span aria-hidden="true"> / </span><span aria-current="page">TRANSPARENCIA</span>
+        </nav>
+        
+        <h1 class="about-titulos display-1 fw-bold">Políticas del Sitio.</h1>
+        <p class="lead text-secondary col-lg-7">
+          Consulta detalladamente nuestros términos de envíos, protecciones de garantía y procesos de devolución.
+        </p>
+      </section>
+
+      <!-- Selector de Botones / Pestañas -->
+      <section class="container-fluid px-4 px-lg-5 pb-3">
+        <div class="d-flex flex-wrap gap-3" id="policyTabs" role="tablist">
+          <button class="btn btn-outline-light rounded-0 px-4 py-2 active" id="btn-envios" data-bs-toggle="pill" data-bs-target="#tab-envios" type="button" role="tab">01 // ENVÍOS</button>
+          <button class="btn btn-outline-light rounded-0 px-4 py-2" id="btn-garantia" data-bs-toggle="pill" data-bs-target="#tab-garantia" type="button" role="tab">02 // GARANTÍA</button>
+          <button class="btn btn-outline-light rounded-0 px-4 py-2" id="btn-devoluciones" data-bs-toggle="pill" data-bs-target="#tab-devoluciones" type="button" role="tab">03 // DEVOLUCIONES</button>
+        </div>
+      </section>
+
+      <!-- Contenido de las Pestañas -->
+      <section class="container-fluid px-4 px-lg-5 py-4 border-top border-secondary border-opacity-25">
+        <div class="tab-content col-lg-9" id="policyContent">
+
+          <!-- Pestaña 1: Envíos -->
+          <div class="tab-pane fade show active" id="tab-envios" role="tabpanel" aria-labelledby="btn-envios">
+            <h3 class="about-titulos h2 mb-4 text-danger">Políticas de Envíos.</h3>
+            <p class="text-secondary mb-3">En CoffeeMod realizamos envíos seguros a toda la República Mexicana a través de socios logísticos certificados.</p>
+            <ul class="text-secondary list-unstyled d-flex flex-column gap-3">
+              <li><i class="bi bi-check2 text-danger me-2"></i><strong>Tiempos de entrega:</strong> Los pedidos estándar toman de 3 a 5 días hábiles. Zonas extendidas pueden demorar de 2 a 3 días adicionales.</li>
+              <li><i class="bi bi-check2 text-danger me-2"></i><strong>Envío Gratis:</strong> Aplica automáticamente en compras de equipos a partir de $1,508 MXN.</li>
+              <li><i class="bi bi-check2 text-danger me-2"></i><strong>Rastreo:</strong> En cuanto tu paquete es recolectado, se te asigna un número de guía rastreable directamente por correo electrónico.</li>
+            </ul>
+          </div>
+
+          <!-- Pestaña 2: Garantía -->
+          <div class="tab-pane fade" id="tab-garantia" role="tabpanel" aria-labelledby="btn-garantia">
+            <h3 class="about-titulos h2 mb-4 text-danger">Políticas de Garantía.</h3>
+            <p class="text-secondary mb-3">Tu tranquilidad al preparar café es nuestra prioridad. Respaldamos cada equipo que vendemos.</p>
+            <ul class="text-secondary list-unstyled d-flex flex-column gap-3">
+              <li><i class="bi bi-shield-check text-danger me-2"></i><strong>Cobertura de 2 años:</strong> Protege contra cualquier defecto de fábrica en piezas mecánicas, calderas, componentes eléctricos y tarjetas internas.</li>
+              <li><i class="bi bi-shield-check text-danger me-2"></i><strong>Soporte Técnico:</strong> Contamos con taller especializado para revisiones físicas y diagnósticos rápidos.</li>
+              <li><i class="bi bi-shield-check text-danger me-2"></i><strong>Exclusiones:</strong> La garantía se invalida por daños físicos evidentes, caídas, picos de voltaje sin regulador o acumulación de sarro por falta de mantenimiento.</li>
+            </ul>
+          </div>
+
+          <!-- Pestaña 3: Devoluciones -->
+          <div class="tab-pane fade" id="tab-devoluciones" role="tabpanel" aria-labelledby="btn-devoluciones">
+            <h3 class="about-titulos h2 mb-4 text-danger">Políticas de Devoluciones.</h3>
+            <p class="text-secondary mb-3">Queremos que ames tu compra. Si no es lo que esperabas, cuentas con un proceso claro de devolución.</p>
+            <ul class="text-secondary list-unstyled d-flex flex-column gap-3">
+              <li><i class="bi bi-arrow-counterclockwise text-danger me-2"></i><strong>Plazo límite:</strong> Tienes hasta 15 días naturales posteriores a la entrega para reportar una devolución o cambio de producto.</li>
+              <li><i class="bi bi-arrow-counterclockwise text-danger me-2"></i><strong>Condiciones del artículo:</strong> El equipo debe devolverse en su empaque original, sin muestras de uso excesivo, con manuales y accesorios completos.</li>
+              <li><i class="bi bi-arrow-counterclockwise text-danger me-2"></i><strong>Excepciones:</strong> Por normas de higiene, los granos de café abiertos o consumibles usados no admiten devolución.</li>
+            </ul>
+          </div>
+
+        </div>
+      </section>
+
+    </main>
+
+    <div id="footer"></div>
+
+    <script defer src="../src/assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+    <script type="module" src="../src/main.js"></script>
+  </body>
+</html>
