@@ -1,3 +1,16 @@
+import "./usuarios-prueba.js";
+
+const CLAVE_USUARIOS = "coffeemod-usuarios";
+
+function obtenerUsuarios() {
+    try {
+        const datos = JSON.parse(localStorage.getItem(CLAVE_USUARIOS));
+        return Array.isArray(datos) ? datos : [];
+    } catch {
+        return [];
+    }
+}
+
 document.addEventListener("DOMContentLoaded", () => {
     const formRegistro = document.querySelector("#form-registro");
     const divAlertas = document.querySelector("#alertas");
@@ -16,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
         formRegistro.addEventListener("submit", (e) => {
             e.preventDefault(); // Evita que se recargue la página
 
-            // Capturar valores usando los nuevos ID
+            // Capturar valores usando los ID de registro.html
             const nombre = document.querySelector("#nombre").value.trim();
             const correo = document.querySelector("#correo").value.trim();
             const telefono = document.querySelector("#telefono").value.trim();
@@ -60,7 +73,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 errores.push("Debes aceptar los términos y el aviso de privacidad.");
             }
 
-            // Si hay errores, mostrarlos en alerta de Bootstrap (Criterio 3 de la rúbrica)
+            // Si hay errores, mostrarlos en alerta de Bootstrap
             if (errores.length > 0) {
                 divAlertas.innerHTML = `
                     <div class="alert alert-danger alert-dismissible fade show" role="alert">
@@ -72,22 +85,41 @@ document.addEventListener("DOMContentLoaded", () => {
                 return;
             }
 
-            // Si todo esta correcto, armar el objeto usuario en JSON (Criterio 5 de la rúbrica)
+            // 6. Verificar si el correo ya existe en coffeemod-usuarios
+            const usuarios = obtenerUsuarios();
+            const correoNormalizado = correo.toLowerCase();
+            const correoDuplicado = usuarios.some(
+                (u) => (u.correo || "").toLowerCase() === correoNormalizado
+            );
+
+            if (correoDuplicado) {
+                divAlertas.innerHTML = `
+                    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                        Ya existe una cuenta registrada con el correo <strong>${correo}</strong>.
+                    </div>
+                `;
+                return;
+            }
+
+            // 7. Armar objeto usuario y guardarlo en localStorage
             const usuario = {
                 nombre: nombre,
                 correo: correo,
                 telefono: telefono,
                 contrasena: contrasena,
+                rol: "cliente",
                 nivelCafe: document.querySelector('button.cafePro[aria-pressed="true"]')?.textContent.trim() || null
             };
 
-            // Mostrar JSON en consola -- se cambiara cuando tengamos el backend
-            console.log("Modelo del usuario en JSON:", JSON.stringify(usuario, null, 2));
+            usuarios.push(usuario);
+            localStorage.setItem(CLAVE_USUARIOS, JSON.stringify(usuarios));
+
+            console.log("Usuario guardado en coffeemod-usuarios:", JSON.stringify(usuario, null, 2));
 
             // Alerta de exito
             divAlertas.innerHTML = `
                 <div class="alert alert-success alert-dismissible fade show" role="alert">
-                    ¡Cuenta creada con éxito! Revisa la consola (F12) para ver el JSON del usuario.
+                    ¡Cuenta creada con éxito!
                 </div>
             `;
 
