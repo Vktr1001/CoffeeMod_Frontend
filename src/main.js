@@ -1,6 +1,7 @@
 import { crearNavbar, inicializarNavbar } from './components/navbar.js';
 import { crearFooter } from './components/footer.js';
 import { initTheme } from './js/theme.js';
+import './js/usuarios-prueba.js';
 
 const header = document.querySelector('#header');
 if (header) {
